@@ -1,5 +1,5 @@
 {
-  "lastChecked": "2026-03-26T14:10:47.809Z",
+  "lastChecked": "2026-03-26T14:18:56.522Z",
   "services": {
     "GitHub": {
       "indicator": "none",
@@ -10,10 +10,10 @@
     },
     "Notion": {
       "indicator": "none",
-      "description": "",
+      "description": "All Systems Operational",
       "lastChanged": "",
       "lastNotified": "",
-      "consecutiveFailures": 1
+      "consecutiveFailures": 0
     },
     "Vercel": {
       "indicator": "none",
@@ -28,6 +28,13 @@
       "lastChanged": "",
       "lastNotified": "",
       "consecutiveFailures": 0
+    },
+    "AWS": {
+      "indicator": "none",
+      "description": "",
+      "lastChanged": "",
+      "lastNotified": "",
+      "consecutiveFailures": 1
     }
   }
 }

@@ -1,0 +1,10 @@
+name: Keepalive
+on:
+  schedule:
+    - cron: '0 0 1 * *'  # 매월 1일
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: git commit --allow-empty -m "chore: keepalive [skip ci]" && git push

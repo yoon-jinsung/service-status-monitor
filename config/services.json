@@ -1,0 +1,31 @@
+{
+  "pollingIntervalMinutes": 5,
+  "defaultAlertChannel": "#dev-alerts",
+  "services": [
+    {
+      "name": "GitHub",
+      "type": "statuspage",
+      "baseUrl": "https://www.githubstatus.com",
+      "enabled": true,
+      "mentionOnCritical": "@here"
+    },
+    {
+      "name": "Notion",
+      "type": "statuspage",
+      "baseUrl": "https://status.notion.so",
+      "enabled": true
+    },
+    {
+      "name": "Vercel",
+      "type": "statuspage",
+      "baseUrl": "https://www.vercel-status.com",
+      "enabled": true
+    },
+    {
+      "name": "Slack",
+      "type": "custom_slack",
+      "statusUrl": "https://slack-status.com/api/v2.0.0/current",
+      "enabled": true
+    }
+  ]
+}

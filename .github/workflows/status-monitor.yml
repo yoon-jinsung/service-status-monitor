@@ -2,11 +2,11 @@ name: Service Status Monitor
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # 5분마다 실행
-  workflow_dispatch:         # 수동 실행 지원
+    - cron: "*/5 * * * *" # 5분마다 실행
+  workflow_dispatch: # 수동 실행 지원
 
 permissions:
-  contents: write            # state/ 파일 커밋에 필요
+  contents: write # state/ 파일 커밋에 필요
 
 jobs:
   check-status:
@@ -16,7 +16,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Install dependencies
         run: npm ci
@@ -25,7 +25,7 @@ jobs:
       - name: Check service status
         run: npx tsx tools/status-monitor/check.ts
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_STATUS_WEBHOOK_URL }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
       - name: Commit state changes
         run: |

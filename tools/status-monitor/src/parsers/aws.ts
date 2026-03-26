@@ -17,6 +17,10 @@ export async function parseAWS(): Promise<PollResult> {
   const url = "https://health.aws.amazon.com/public/currentevents";
   const response = await fetch(url, {
     signal: AbortSignal.timeout(10_000),
+    headers: {
+      Accept: "application/json",
+      "Accept-Encoding": "identity",
+    },
   });
 
   if (!response.ok) {

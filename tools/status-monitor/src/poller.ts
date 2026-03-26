@@ -1,4 +1,5 @@
 import { parseAWS } from "./parsers/aws.js";
+import { parseAwsRss } from "./parsers/aws-rss.js";
 import { parseSlackStatus } from "./parsers/slack.js";
 import { parseStatuspage } from "./parsers/statuspage.js";
 import type { PollResult, ServiceConfig } from "./types.js";
@@ -19,6 +20,12 @@ async function pollService(service: ServiceConfig): Promise<PollResult> {
     }
     case "aws_health": {
       return parseAWS();
+    }
+    case "aws_rss": {
+      if (!service.statusUrl) {
+        throw new Error(`Service "${service.name}" is missing statusUrl`);
+      }
+      return parseAwsRss(service.statusUrl);
     }
     default:
       throw new Error(

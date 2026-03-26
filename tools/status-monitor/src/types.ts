@@ -2,7 +2,7 @@ export type Indicator = "none" | "minor" | "major" | "critical";
 
 export interface ServiceConfig {
   name: string;
-  type: "statuspage" | "custom_slack" | "aws_health";
+  type: "statuspage" | "custom_slack" | "aws_health" | "aws_rss";
   baseUrl?: string;
   statusUrl?: string;
   enabled: boolean;

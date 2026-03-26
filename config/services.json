@@ -22,6 +22,20 @@
       "enabled": true
     },
     {
+      "name": "API Gateway (Seoul)",
+      "type": "aws_rss",
+      "statusUrl": "https://status.aws.amazon.com/rss/apigateway-ap-northeast-2.rss",
+      "enabled": true,
+      "mentionOnCritical": "@here"
+    },
+    {
+      "name": "API Gateway (Tokyo)",
+      "type": "aws_rss",
+      "statusUrl": "https://status.aws.amazon.com/rss/apigateway-ap-northeast-1.rss",
+      "enabled": true,
+      "mentionOnCritical": "@here"
+    },
+    {
       "name": "Slack",
       "type": "custom_slack",
       "baseUrl": "https://slack-status.com",

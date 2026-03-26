@@ -7,5 +7,14 @@
     "current": "critical",
     "description": "[Bahrain] Increased Connectivity Issues and API Error Rates; [UAE] Increased Error Rates",
     "detectedAt": "2026. 3. 26. 오후 11:23:47"
+  },
+  {
+    "id": "7bc64476-56ab-40e0-b609-fa39ec580a0f",
+    "service": "Slack",
+    "type": "degraded",
+    "previous": "none",
+    "current": "major",
+    "description": "Slack status: active",
+    "detectedAt": "2026. 3. 27. AM 1:21:23"
   }
 ]

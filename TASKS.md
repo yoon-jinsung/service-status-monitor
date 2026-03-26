@@ -5,13 +5,13 @@
 | # | 태스크 | 산출물 | Phase |
 |---|--------|--------|-------|
 | 1 | 프로젝트 초기화 (package.json, 디렉토리 구조) | `tools/status-monitor/`, `config/`, `state/`, `logs/` | MVP |
-| 2 | 설정 파일 작성 (config/services.json, config.js) | `config/services.json`, `src/config.js` | MVP |
-| 3 | Statuspage API 폴러 및 파서 구현 | `src/poller.js`, `src/parsers/statuspage.js`, `src/parsers/slack.js` | MVP |
-| 4 | 상태 변화 감지 로직 구현 | `src/detector.js` | MVP |
-| 5 | 상태 저장 모듈 구현 | `src/state.js` | MVP |
-| 6 | Slack Webhook 알림 모듈 구현 | `src/notifier.js` | MVP |
-| 7 | 인시던트 이력 기록 모듈 구현 | `src/logger.js` | MVP |
-| 8 | 메인 실행 스크립트 구현 | `check.js` | MVP |
+| 2 | 설정 파일 작성 (config/services.json, config.ts) | `config/services.json`, `src/config.ts` | MVP |
+| 3 | Statuspage API 폴러 및 파서 구현 | `src/poller.ts`, `src/parsers/statuspage.ts`, `src/parsers/slack.ts` | MVP |
+| 4 | 상태 변화 감지 로직 구현 | `src/detector.ts` | MVP |
+| 5 | 상태 저장 모듈 구현 | `src/state.ts` | MVP |
+| 6 | Slack Webhook 알림 모듈 구현 | `src/notifier.ts` | MVP |
+| 7 | 인시던트 이력 기록 모듈 구현 | `src/logger.ts` | MVP |
+| 8 | 메인 실행 스크립트 구현 | `check.ts` | MVP |
 | 9 | GitHub Actions 워크플로우 작성 | `.github/workflows/status-monitor.yml`, `keepalive.yml` | MVP |
 | 10 | 초기 상태/로그 파일 생성 | `state/status.json`, `logs/incidents.json` | MVP |
 

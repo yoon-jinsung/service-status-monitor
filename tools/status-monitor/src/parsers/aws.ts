@@ -1,3 +1,4 @@
+import { gunzipSync } from "node:zlib";
 import type { Indicator, PollResult } from "../types.js";
 
 interface AWSEvent {
@@ -19,7 +20,6 @@ export async function parseAWS(): Promise<PollResult> {
     signal: AbortSignal.timeout(10_000),
     headers: {
       Accept: "application/json",
-      "Accept-Encoding": "identity",
     },
   });
 
@@ -29,7 +29,10 @@ export async function parseAWS(): Promise<PollResult> {
     );
   }
 
-  const events = (await response.json()) as AWSEvent[];
+  // gzip 압축된 응답을 수동으로 해제
+  const buffer = await response.arrayBuffer();
+  const decompressed = gunzipSync(Buffer.from(buffer));
+  const events = JSON.parse(decompressed.toString("utf-8")) as AWSEvent[];
 
   // 이벤트가 없으면 정상 상태
   if (!events || events.length === 0) {

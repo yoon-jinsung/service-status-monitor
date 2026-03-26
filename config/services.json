@@ -16,9 +16,8 @@
       "enabled": true
     },
     {
-      "name": "Vercel",
-      "type": "statuspage",
-      "baseUrl": "https://www.vercel-status.com",
+      "name": "AWS",
+      "type": "aws_health",
       "enabled": true
     },
     {

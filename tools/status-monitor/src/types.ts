@@ -1,8 +1,8 @@
-export type Indicator = 'none' | 'minor' | 'major' | 'critical';
+export type Indicator = "none" | "minor" | "major" | "critical";
 
 export interface ServiceConfig {
   name: string;
-  type: 'statuspage' | 'custom_slack';
+  type: "statuspage" | "custom_slack" | "aws_health";
   baseUrl?: string;
   statusUrl?: string;
   enabled: boolean;
@@ -44,7 +44,7 @@ export interface StatusChange {
 export interface Incident {
   id: string;
   service: string;
-  type: 'degraded' | 'recovered';
+  type: "degraded" | "recovered";
   previous: Indicator;
   current: Indicator;
   description: string;

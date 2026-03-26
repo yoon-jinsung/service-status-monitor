@@ -1,23 +1,29 @@
-import type { PollResult, ServiceConfig } from './types.js';
-import { parseStatuspage } from './parsers/statuspage.js';
-import { parseSlackStatus } from './parsers/slack.js';
+import { parseAWS } from "./parsers/aws.js";
+import { parseSlackStatus } from "./parsers/slack.js";
+import { parseStatuspage } from "./parsers/statuspage.js";
+import type { PollResult, ServiceConfig } from "./types.js";
 
 async function pollService(service: ServiceConfig): Promise<PollResult> {
   switch (service.type) {
-    case 'statuspage': {
+    case "statuspage": {
       if (!service.baseUrl) {
         throw new Error(`Service "${service.name}" is missing baseUrl`);
       }
       return parseStatuspage(service.baseUrl);
     }
-    case 'custom_slack': {
+    case "custom_slack": {
       if (!service.statusUrl) {
         throw new Error(`Service "${service.name}" is missing statusUrl`);
       }
       return parseSlackStatus(service.statusUrl);
     }
+    case "aws_health": {
+      return parseAWS();
+    }
     default:
-      throw new Error(`Unknown service type: ${(service as ServiceConfig).type}`);
+      throw new Error(
+        `Unknown service type: ${(service as ServiceConfig).type}`,
+      );
   }
 }
 
@@ -34,7 +40,7 @@ export async function pollAll(
     const service = enabled[i];
     const result = results[i];
 
-    if (result.status === 'fulfilled') {
+    if (result.status === "fulfilled") {
       output[service.name] = result.value;
     } else {
       console.error(`[poller] ${service.name} polling failed:`, result.reason);

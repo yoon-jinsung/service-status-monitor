@@ -1,21 +1,21 @@
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
-import { dirname, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
-import type { StatusSnapshot } from './types.js';
+import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+import type { StatusSnapshot } from "./types.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const STATE_PATH = resolve(__dirname, '../../state/status.json');
+const STATE_PATH = resolve(__dirname, "../../../state/status.json");
 
 function defaultSnapshot(): StatusSnapshot {
   return {
-    lastChecked: '',
+    lastChecked: "",
     services: {},
   };
 }
 
 export async function loadState(): Promise<StatusSnapshot> {
   try {
-    const raw = await readFile(STATE_PATH, 'utf-8');
+    const raw = await readFile(STATE_PATH, "utf-8");
     if (!raw.trim()) return defaultSnapshot();
     return JSON.parse(raw) as StatusSnapshot;
   } catch {
@@ -25,5 +25,9 @@ export async function loadState(): Promise<StatusSnapshot> {
 
 export async function saveState(snapshot: StatusSnapshot): Promise<void> {
   await mkdir(dirname(STATE_PATH), { recursive: true });
-  await writeFile(STATE_PATH, JSON.stringify(snapshot, null, 2) + '\n', 'utf-8');
+  await writeFile(
+    STATE_PATH,
+    JSON.stringify(snapshot, null, 2) + "\n",
+    "utf-8",
+  );
 }

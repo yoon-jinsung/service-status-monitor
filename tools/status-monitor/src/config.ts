@@ -6,7 +6,7 @@ import { MonitorConfig, ServiceConfig } from "./types";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const CONFIG_PATH = resolve(__dirname, "../../config/services.json");
+const CONFIG_PATH = resolve(__dirname, "../../../config/services.json");
 
 export async function loadConfig(): Promise<MonitorConfig> {
   const raw = await readFile(CONFIG_PATH, "utf-8");

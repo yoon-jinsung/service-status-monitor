@@ -32,7 +32,7 @@ function buildDegradedBlocks(change: StatusChange, now: Date) {
     : [];
 
   const statusPageUrl =
-    change.serviceConfig.statusUrl ?? change.serviceConfig.baseUrl;
+    change.serviceConfig.baseUrl ?? change.serviceConfig.statusUrl;
   const statusUrlField = statusPageUrl
     ? [
         {
@@ -92,7 +92,7 @@ function buildDegradedBlocks(change: StatusChange, now: Date) {
 
 function buildRecoveredBlocks(change: StatusChange, now: Date) {
   const statusPageUrl =
-    change.serviceConfig.statusUrl ?? change.serviceConfig.baseUrl;
+    change.serviceConfig.baseUrl ?? change.serviceConfig.statusUrl;
   const statusUrlField = statusPageUrl
     ? [
         {

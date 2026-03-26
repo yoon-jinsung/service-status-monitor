@@ -18,11 +18,13 @@
     {
       "name": "AWS",
       "type": "aws_health",
+      "baseUrl": "https://health.aws.amazon.com/health/status",
       "enabled": true
     },
     {
       "name": "Slack",
       "type": "custom_slack",
+      "baseUrl": "https://slack-status.com",
       "statusUrl": "https://slack-status.com/api/v2.0.0/current",
       "enabled": true
     }

@@ -13,17 +13,20 @@
       "name": "Notion",
       "type": "statuspage",
       "baseUrl": "https://www.notion-status.com",
-      "enabled": true
+      "enabled": true,
+      "mentionOnCritical": "@here"
     },
     {
       "name": "AWS",
       "type": "aws_health",
       "baseUrl": "https://health.aws.amazon.com/health/status",
-      "enabled": true
+      "enabled": true,
+      "mentionOnCritical": "@here"
     },
     {
       "name": "API Gateway (Seoul)",
       "type": "aws_rss",
+      "baseUrl": "https://health.aws.amazon.com/health/status",
       "statusUrl": "https://status.aws.amazon.com/rss/apigateway-ap-northeast-2.rss",
       "enabled": true,
       "mentionOnCritical": "@here"
@@ -31,6 +34,7 @@
     {
       "name": "API Gateway (Tokyo)",
       "type": "aws_rss",
+      "baseUrl": "https://health.aws.amazon.com/health/status",
       "statusUrl": "https://status.aws.amazon.com/rss/apigateway-ap-northeast-1.rss",
       "enabled": true,
       "mentionOnCritical": "@here"
@@ -40,7 +44,8 @@
       "type": "custom_slack",
       "baseUrl": "https://slack-status.com",
       "statusUrl": "https://slack-status.com/api/v2.0.0/current",
-      "enabled": true
+      "enabled": true,
+      "mentionOnCritical": "@here"
     }
   ]
 }

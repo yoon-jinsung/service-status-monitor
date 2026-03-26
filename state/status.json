@@ -1,4 +1,33 @@
 {
-  "lastChecked": "",
-  "services": {}
+  "lastChecked": "2026-03-26T14:10:47.809Z",
+  "services": {
+    "GitHub": {
+      "indicator": "none",
+      "description": "All Systems Operational",
+      "lastChanged": "",
+      "lastNotified": "",
+      "consecutiveFailures": 0
+    },
+    "Notion": {
+      "indicator": "none",
+      "description": "",
+      "lastChanged": "",
+      "lastNotified": "",
+      "consecutiveFailures": 1
+    },
+    "Vercel": {
+      "indicator": "none",
+      "description": "All Systems Operational",
+      "lastChanged": "",
+      "lastNotified": "",
+      "consecutiveFailures": 0
+    },
+    "Slack": {
+      "indicator": "none",
+      "description": "Slack is operating normally",
+      "lastChanged": "",
+      "lastNotified": "",
+      "consecutiveFailures": 0
+    }
+  }
 }

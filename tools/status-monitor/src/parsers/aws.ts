@@ -1,4 +1,3 @@
-import { gunzipSync } from "node:zlib";
 import type { Indicator, PollResult } from "../types.js";
 
 interface AWSEvent {
@@ -29,10 +28,11 @@ export async function parseAWS(): Promise<PollResult> {
     );
   }
 
-  // gzip 압축된 응답을 수동으로 해제
+  // UTF-16 인코딩된 응답을 디코딩
   const buffer = await response.arrayBuffer();
-  const decompressed = gunzipSync(Buffer.from(buffer));
-  const events = JSON.parse(decompressed.toString("utf-8")) as AWSEvent[];
+  const decoder = new TextDecoder("utf-16be");
+  const jsonText = decoder.decode(buffer);
+  const events = JSON.parse(jsonText) as AWSEvent[];
 
   // 이벤트가 없으면 정상 상태
   if (!events || events.length === 0) {

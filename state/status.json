@@ -1,5 +1,5 @@
 {
-  "lastChecked": "2026-03-26T14:20:44.851Z",
+  "lastChecked": "2026-03-26T14:23:47.295Z",
   "services": {
     "GitHub": {
       "indicator": "none",
@@ -30,11 +30,11 @@
       "consecutiveFailures": 0
     },
     "AWS": {
-      "indicator": "none",
-      "description": "",
-      "lastChanged": "",
-      "lastNotified": "",
-      "consecutiveFailures": 2
+      "indicator": "critical",
+      "description": "[Bahrain] Increased Connectivity Issues and API Error Rates; [UAE] Increased Error Rates",
+      "lastChanged": "2026-03-26T14:23:47.295Z",
+      "lastNotified": "2026-03-26T14:23:47.295Z",
+      "consecutiveFailures": 0
     }
   }
 }

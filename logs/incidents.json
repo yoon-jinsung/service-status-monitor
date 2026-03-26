@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "id": "a801af33-814d-4732-b3ae-05bd2e3bbab0",
+    "service": "AWS",
+    "type": "degraded",
+    "previous": "none",
+    "current": "critical",
+    "description": "[Bahrain] Increased Connectivity Issues and API Error Rates; [UAE] Increased Error Rates",
+    "detectedAt": "2026. 3. 26. 오후 11:23:47"
+  }
+]

@@ -122,3 +122,5 @@ if (response.ok) {
 } else {
   console.error("❌ 알림 전송 실패:", await response.text());
 }
+
+export {};

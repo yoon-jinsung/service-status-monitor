@@ -12,7 +12,7 @@
     {
       "name": "Notion",
       "type": "statuspage",
-      "baseUrl": "https://status.notion.so",
+      "baseUrl": "https://www.notion-status.com",
       "enabled": true
     },
     {

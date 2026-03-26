@@ -1,5 +1,5 @@
 {
-  "lastChecked": "2026-03-26T22:44:24.912Z",
+  "lastChecked": "2026-03-26T23:36:23.434Z",
   "services": {
     "GitHub": {
       "indicator": "none",
@@ -34,6 +34,20 @@
       "description": "[Bahrain] Increased Connectivity Issues and API Error Rates; [UAE] Increased Error Rates",
       "lastChanged": "2026-03-26T14:23:47.295Z",
       "lastNotified": "2026-03-26T14:23:47.295Z",
+      "consecutiveFailures": 0
+    },
+    "API Gateway (Seoul)": {
+      "indicator": "none",
+      "description": "All Systems Operational",
+      "lastChanged": "",
+      "lastNotified": "",
+      "consecutiveFailures": 0
+    },
+    "API Gateway (Tokyo)": {
+      "indicator": "none",
+      "description": "All Systems Operational",
+      "lastChanged": "",
+      "lastNotified": "",
       "consecutiveFailures": 0
     }
   }

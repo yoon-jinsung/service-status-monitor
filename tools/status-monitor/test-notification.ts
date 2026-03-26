@@ -28,24 +28,44 @@ const now = new Date();
 // 모든 서비스 테스트
 const services = [
   {
-    name: "GitHub (테스트)",
+    name: "GitHub",
     status: "critical" as const,
     statusUrl: "https://www.githubstatus.com",
+    description: "Actions, API Requests, Git Operations - Major System Outage",
   },
   {
-    name: "Notion (테스트)",
+    name: "Notion",
     status: "major" as const,
     statusUrl: "https://www.notion-status.com",
+    description:
+      "Degraded Performance - Some users may experience slow page loads",
   },
   {
-    name: "AWS (테스트)",
+    name: "AWS",
     status: "critical" as const,
     statusUrl: "https://health.aws.amazon.com/health/status",
+    description:
+      "[Bahrain] Increased Connectivity Issues and API Error Rates; [UAE] Increased Error Rates",
   },
   {
-    name: "Slack (테스트)",
+    name: "API Gateway (Seoul)",
+    status: "major" as const,
+    statusUrl: "https://health.aws.amazon.com/health/status",
+    description: "Increased API error rates in AP-NORTHEAST-2 region",
+  },
+  {
+    name: "API Gateway (Tokyo)",
     status: "minor" as const,
-    statusUrl: "https://status.slack.com",
+    statusUrl: "https://health.aws.amazon.com/health/status",
+    description:
+      "Elevated latencies for some API calls in AP-NORTHEAST-1 region",
+  },
+  {
+    name: "Slack",
+    status: "major" as const,
+    statusUrl: "https://slack-status.com",
+    description:
+      "Messaging - Some users may experience delays in sending messages",
   },
 ];
 
@@ -90,7 +110,7 @@ const allBlocks = services.flatMap((service) => {
       type: "section",
       text: {
         type: "mrkdwn",
-        text: `*Description:*\n⚠️ 이것은 ${service.name} 테스트 알림입니다. 실제 장애가 아닙니다.`,
+        text: `*Description:*\n${service.description}`,
       },
     },
     {
@@ -118,7 +138,9 @@ if (response.ok) {
   console.log("   - GitHub (Critical)");
   console.log("   - Notion (Major)");
   console.log("   - AWS (Critical)");
-  console.log("   - Slack (Minor)");
+  console.log("   - API Gateway Seoul (Major)");
+  console.log("   - API Gateway Tokyo (Minor)");
+  console.log("   - Slack (Major)");
 } else {
   console.error("❌ 알림 전송 실패:", await response.text());
 }

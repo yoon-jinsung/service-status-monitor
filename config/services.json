@@ -1,6 +1,6 @@
 {
   "pollingIntervalMinutes": 5,
-  "defaultAlertChannel": "#dev-alerts",
+  "defaultAlertChannel": "#ce-service-status-monitor",
   "services": [
     {
       "name": "GitHub",

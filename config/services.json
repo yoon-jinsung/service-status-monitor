@@ -39,6 +39,13 @@
       "statusUrl": "https://slack-status.com/api/v2.0.0/current",
       "enabled": true,
       "mentionOnCritical": "@here"
+    },
+    {
+      "name": "Claude",
+      "type": "statuspage",
+      "baseUrl": "https://status.claude.com",
+      "enabled": true,
+      "mentionOnCritical": "@here"
     }
   ]
 }

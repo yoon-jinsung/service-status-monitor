@@ -1,90 +1,92 @@
-# 외부 서비스 상태 모니터링 & Slack 알림 서비스
+# Service Status Monitor
 
-팀이 의존하는 외부 SaaS 서비스(GitHub, Notion, AWS, Slack)의 장애 및 상태 변화를 **자동으로 감지**하여 **Slack 채널에 실시간 알림**을 전달하는 모니터링 서비스입니다.
+**[English](README.md)** · [日本語](README.ja.md) · [한국어](README.ko.md)
 
-## 핵심 가치
+A monitoring service that **automatically detects** outages and status changes of external SaaS services your team depends on (GitHub, Notion, AWS, Slack) and delivers **real-time alerts to Slack**.
 
-- **빠른 장애 인지** — 외부 서비스 장애를 5분 내 감지
-- **제로 비용** — GitHub Actions 무료 범위 내 운영 ($0/월)
-- **인프라 불필요** — AWS/서버 없이 GitHub 리포지토리만으로 운영
-- **코드로 관리** — 모니터링 설정, 로직, 이력 모두 Git으로 버전 관리
-- **정확한 주기** — cron-job.org로 정확히 5분마다 실행
+## Key Values
 
-## 아키텍처
+- **Fast incident detection** — Detects external service outages within 5 minutes
+- **Zero cost** — Operates within GitHub Actions free tier ($0/month)
+- **No infrastructure** — Runs entirely on a GitHub repository, no AWS/server needed
+- **Code-managed** — Monitoring config, logic, and history all version-controlled in Git
+- **Precise schedule** — Triggered exactly every 5 minutes via cron-job.org
+
+## Architecture
 
 ```
-cron-job.org (5분마다 workflow_dispatch 트리거)
+cron-job.org (triggers workflow_dispatch every 5 min)
   → GitHub Actions
-      ├─ config/services.json 로드 (모니터링 대상)
-      ├─ 각 서비스 상태 API 병렬 호출
-      ├─ state/status.json과 비교하여 변화 감지
-      ├─ 변화 시 → Slack Webhook 알림 전송
-      ├─ logs/incidents.json에 인시던트 이력 기록
-      └─ state/status.json 업데이트 후 Git 커밋 & 푸시
+      ├─ Load config/services.json (monitoring targets)
+      ├─ Fetch each service status API in parallel
+      ├─ Compare with state/status.json to detect changes
+      ├─ On change → Send Slack Webhook notification
+      ├─ Append incident history to logs/incidents.json
+      └─ Update state/status.json → Git commit & push
 ```
 
-## 모니터링 대상 서비스
+## Monitored Services
 
-| 서비스              | 상태 페이지           | 타입                 |
+| Service             | Status Page           | Type                 |
 | ------------------- | --------------------- | -------------------- |
 | GitHub              | githubstatus.com      | Atlassian Statuspage |
 | Notion              | notion-status.com     | Atlassian Statuspage |
 | AWS                 | health.aws.amazon.com | AWS Health API       |
 | API Gateway (Seoul) | status.aws.amazon.com | AWS RSS              |
 | API Gateway (Tokyo) | status.aws.amazon.com | AWS RSS              |
-| Slack               | slack-status.com      | 독자 API             |
+| Slack               | slack-status.com      | Custom API           |
 
-## 프로젝트 구조
+## Project Structure
 
 ```
 .github/workflows/
-  status-monitor.yml       # workflow_dispatch (cron-job.org에서 트리거)
-  keepalive.yml            # 60일 비활성화 방지
+  status-monitor.yml       # workflow_dispatch (triggered by cron-job.org)
+  keepalive.yml            # Prevent 60-day inactivity deactivation
 
 tools/status-monitor/
-  check.ts                 # 메인 실행 스크립트
-  test-notification.ts     # 테스트 알림 전송 스크립트
+  check.ts                 # Main execution script
+  test-notification.ts     # Test notification script
   src/
-    types.ts               # 공통 타입 정의
-    config.ts              # 설정 로더
-    poller.ts              # 상태 API 폴링
+    types.ts               # Shared type definitions
+    config.ts              # Config loader
+    poller.ts              # Status API polling
     parsers/
-      statuspage.ts        # Atlassian Statuspage 파서
-      slack.ts             # Slack 독자 API 파서
-      aws.ts               # AWS Health API 파서
-      aws-rss.ts           # AWS RSS 피드 파서
-    detector.ts            # 상태 변화 감지
-    notifier.ts            # Slack Webhook 알림
-    state.ts               # state/status.json 읽기/쓰기
-    logger.ts              # 인시던트 이력 기록
+      statuspage.ts        # Atlassian Statuspage parser
+      slack.ts             # Slack custom API parser
+      aws.ts               # AWS Health API parser
+      aws-rss.ts           # AWS RSS feed parser
+    detector.ts            # Status change detection
+    notifier.ts            # Slack Webhook notifications
+    state.ts               # state/status.json read/write
+    logger.ts              # Incident history logging
 
-config/services.json       # 모니터링 대상 설정
-state/status.json          # 마지막 상태 스냅샷 (Git 커밋 관리)
-logs/incidents.json        # 인시던트 이력 (append-only)
+config/services.json       # Monitoring target configuration
+state/status.json          # Last status snapshot (managed via Git commits)
+logs/incidents.json        # Incident history (append-only)
 ```
 
-## 설정 방법
+## Setup
 
-### 1. Slack Incoming Webhook 생성
+### 1. Create Slack Incoming Webhook
 
 1. [api.slack.com/apps](https://api.slack.com/apps) → **Create New App** → From scratch
 2. Features → **Incoming Webhooks** → On
-3. **Add New Webhook to Workspace** → `#ce-service-status-monitor` 채널 선택
-4. 생성된 Webhook URL 복사
+3. **Add New Webhook to Workspace** → Select `#ce-service-status-monitor` channel
+4. Copy the generated Webhook URL
 
-### 2. GitHub Secrets 등록
+### 2. Register GitHub Secrets
 
-리포지토리 **Settings** → **Secrets and variables** → **Actions** → **New repository secret**
+Repository **Settings** → **Secrets and variables** → **Actions** → **New repository secret**
 
-| Name                | Value                        |
-| ------------------- | ---------------------------- |
-| `SLACK_WEBHOOK_URL` | Slack에서 복사한 Webhook URL |
+| Name                | Value                     |
+| ------------------- | ------------------------- |
+| `SLACK_WEBHOOK_URL` | Webhook URL copied above  |
 
-### 3. cron-job.org 설정 (정확한 5분 주기)
+### 3. Configure cron-job.org (Precise 5-minute interval)
 
-1. [cron-job.org](https://console.cron-job.org/) 계정 생성 및 로그인
-2. **Create cronjob** 클릭
-3. 설정:
+1. Create an account and log in at [cron-job.org](https://console.cron-job.org/)
+2. Click **Create cronjob**
+3. Settings:
    - **Title**: `Service Status Monitor`
    - **URL**: `https://api.github.com/repos/yoon-jinsung/service-status-monitor/actions/workflows/status-monitor.yml/dispatches`
    - **Schedule**: Every 5 minutes
@@ -94,76 +96,76 @@ logs/incidents.json        # 인시던트 이력 (append-only)
      - `Content-Type`: `application/json`
    - **Request Body**: `{"ref":"main"}`
 
-4. GitHub PAT 생성:
+4. Create GitHub PAT:
    - GitHub → Settings → Developer settings → Personal access tokens → **Fine-grained tokens**
-   - Repository: `service-status-monitor`만 선택
+   - Repository: select `service-status-monitor` only
    - Permissions: **Actions** → Read and Write
 
-### 4. 동작 확인
+### 4. Verify
 
-GitHub Actions 탭 → **Service Status Monitor** → **Run workflow** 버튼으로 수동 실행하여 정상 동작 확인
+GitHub Actions tab → **Service Status Monitor** → **Run workflow** → Confirm Slack notification is received
 
-## Slack 알림 예시
+## Slack Notification Examples
 
-### 장애 발생
+### Incident Detected
 
-> :red_circle: **Notion 서비스 장애 발생**
+> :red_circle: **Notion - Major Incident**
 >
-> 상태: Major System Outage
-> 감지 시각: 2026-03-26 15:30 KST
-> 이전 상태: :large_green_circle: Operational → 현재 상태: :red_circle: Major
+> Status: Major System Outage
+> Detected At: Mar 26, 2026, 15:30:00 KST
+> Previous: :large_green_circle: Operational → Current: :red_circle: Major
 
-### 복구 완료
+### Recovered
 
-> :large_green_circle: **Notion 서비스 복구 완료**
+> :large_green_circle: **Notion - Recovered**
 >
-> 상태: All Systems Operational
-> 복구 시각: 2026-03-26 16:10 KST
-> 장애 지속 시간: 40분
+> Status: All Systems Operational
+> Recovered At: Mar 26, 2026, 16:10:00 KST
+> Previous: :red_circle: Major
 
-### 상태별 알림
+### Status Mapping
 
-| 상태              | 아이콘                | 멘션       |
-| ----------------- | --------------------- | ---------- |
-| 복구 (none)       | :large_green_circle:  | 없음       |
-| 경미 (minor)      | :large_yellow_circle: | 없음       |
-| 심각 (major)      | :red_circle:          | `@here`    |
-| 치명적 (critical) | :rotating_light:      | `@channel` |
+| Status   | Icon                  | Mention    |
+| -------- | --------------------- | ---------- |
+| none     | :large_green_circle:  | —          |
+| minor    | :large_yellow_circle: | —          |
+| major    | :red_circle:          | `@here`    |
+| critical | :rotating_light:      | `@channel` |
 
-## 서비스 추가 방법
+## Adding a New Service
 
-`config/services.json`의 `services` 배열에 항목을 추가하면 됩니다.
+Add an entry to the `services` array in `config/services.json`:
 
 ```json
 {
-  "name": "서비스명",
+  "name": "My Service",
   "type": "statuspage",
   "baseUrl": "https://status.example.com",
   "enabled": true
 }
 ```
 
-Atlassian Statuspage 기반이 아닌 경우 `type: "custom_slack"` 같은 커스텀 파서를 추가할 수 있습니다.
+For AWS-specific services, use `type: "aws_rss"` with a `statusUrl` pointing to the RSS feed.
 
-## 에러 핸들링
+## Error Handling
 
-| 시나리오            | 처리                                           |
-| ------------------- | ---------------------------------------------- |
-| API 타임아웃 (10초) | 해당 서비스 건너뛰기, `consecutiveFailures` +1 |
-| HTTP 4xx/5xx        | 동일하게 `consecutiveFailures` +1              |
-| 3회 연속 실패       | Slack에 "모니터링 실패" 알림 전송              |
-| JSON 파싱 실패      | 해당 서비스 건너뛰기                           |
+| Scenario              | Behavior                                            |
+| --------------------- | --------------------------------------------------- |
+| API timeout (10s)     | Skip service, increment `consecutiveFailures`       |
+| HTTP 4xx/5xx          | Same as above                                       |
+| 3 consecutive failures| Send "monitoring failure" alert to Slack            |
+| JSON parse error      | Skip service                                        |
 
-## 비용
+## Cost
 
-| 항목                          | 비용                               |
-| ----------------------------- | ---------------------------------- |
-| GitHub Actions (public repo)  | 무료 (무제한)                      |
-| GitHub Actions (private repo) | 무료 (월 2,000분 중 약 720분 사용) |
-| Slack Incoming Webhook        | 무료                               |
-| **합계**                      | **$0/월**                          |
+| Item                          | Cost                                      |
+| ----------------------------- | ----------------------------------------- |
+| GitHub Actions (public repo)  | Free (unlimited)                          |
+| GitHub Actions (private repo) | Free (uses ~720 of 2,000 free min/month)  |
+| Slack Incoming Webhook        | Free                                      |
+| **Total**                     | **$0/month**                              |
 
-## 로컬 실행
+## Local Execution
 
 ```bash
 cd tools/status-monitor

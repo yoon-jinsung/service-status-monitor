@@ -31,7 +31,6 @@ cron-job.org (triggers workflow_dispatch every 5 min)
 | ------------------- | --------------------- | -------------------- |
 | GitHub              | githubstatus.com      | Atlassian Statuspage |
 | Notion              | notion-status.com     | Atlassian Statuspage |
-| AWS                 | health.aws.amazon.com | AWS Health API       |
 | API Gateway (Seoul) | status.aws.amazon.com | AWS RSS              |
 | API Gateway (Tokyo) | status.aws.amazon.com | AWS RSS              |
 | Slack               | slack-status.com      | Custom API           |

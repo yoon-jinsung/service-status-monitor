@@ -31,7 +31,6 @@ cron-job.org（5分ごとに workflow_dispatch をトリガー）
 | ------------------- | --------------------- | -------------------- |
 | GitHub              | githubstatus.com      | Atlassian Statuspage |
 | Notion              | notion-status.com     | Atlassian Statuspage |
-| AWS                 | health.aws.amazon.com | AWS Health API       |
 | API Gateway (Seoul) | status.aws.amazon.com | AWS RSS              |
 | API Gateway (Tokyo) | status.aws.amazon.com | AWS RSS              |
 | Slack               | slack-status.com      | カスタム API         |

@@ -17,13 +17,6 @@
       "mentionOnCritical": "@here"
     },
     {
-      "name": "AWS",
-      "type": "aws_health",
-      "baseUrl": "https://health.aws.amazon.com/health/status",
-      "enabled": true,
-      "mentionOnCritical": "@here"
-    },
-    {
       "name": "API Gateway (Seoul)",
       "type": "aws_rss",
       "baseUrl": "https://health.aws.amazon.com/health/status",

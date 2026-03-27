@@ -15,13 +15,6 @@
       "lastNotified": "",
       "consecutiveFailures": 0
     },
-    "Vercel": {
-      "indicator": "none",
-      "description": "All Systems Operational",
-      "lastChanged": "",
-      "lastNotified": "",
-      "consecutiveFailures": 0
-    },
     "Slack": {
       "indicator": "none",
       "description": "Slack is operating normally",

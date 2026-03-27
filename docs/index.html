@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Status Monitor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:        #080b0f;
+      --bg-card:   #0d1117;
+      --bg-hover:  #131920;
+      --border:    #1e2830;
+      --border-hi: #2a3a4a;
+      --text:      #c9d4dc;
+      --text-dim:  #5a7080;
+      --text-hi:   #e8f0f5;
+      --green:     #00e676;
+      --green-dim: #00c85320;
+      --yellow:    #ffd740;
+      --yellow-dim:#ffd74018;
+      --red:       #ff5252;
+      --red-dim:   #ff525218;
+      --critical:  #ff1744;
+      --critical-dim: #ff174420;
+      --accent:    #00b4d8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'JetBrains Mono', monospace;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── background grid ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.35;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 50% at 50% 0%, #00b4d810 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ── header ── */
+    header {
+      padding: 52px 0 40px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 40px;
+      animation: fadeDown 0.6s ease both;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .logo-area h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 800;
+      color: var(--text-hi);
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .logo-area .sub {
+      font-size: 11px;
+      color: var(--text-dim);
+      margin-top: 8px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .overall-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 18px;
+      border-radius: 6px;
+      border: 1px solid;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: all 0.3s;
+    }
+
+    .overall-badge.ok {
+      background: var(--green-dim);
+      border-color: #00e67640;
+      color: var(--green);
+    }
+    .overall-badge.warn {
+      background: var(--yellow-dim);
+      border-color: #ffd74040;
+      color: var(--yellow);
+    }
+    .overall-badge.err {
+      background: var(--red-dim);
+      border-color: #ff525240;
+      color: var(--red);
+    }
+
+    .meta-row {
+      display: flex;
+      gap: 24px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .meta-item {
+      font-size: 11px;
+      color: var(--text-dim);
+    }
+
+    .meta-item span {
+      color: var(--text);
+    }
+
+    /* ── pulse dot ── */
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    .dot.none     { background: var(--green);    box-shadow: 0 0 6px var(--green); }
+    .dot.minor    { background: var(--yellow);   box-shadow: 0 0 6px var(--yellow); }
+    .dot.major    { background: var(--red);      box-shadow: 0 0 6px var(--red);    animation: pulse-red 1.5s infinite; }
+    .dot.critical { background: var(--critical); box-shadow: 0 0 8px var(--critical); animation: pulse-crit 1s infinite; }
+    .dot.loading  { background: var(--text-dim); }
+
+    @keyframes pulse-red {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    @keyframes pulse-crit {
+      0%, 100% { box-shadow: 0 0 8px var(--critical); }
+      50% { box-shadow: 0 0 20px var(--critical), 0 0 40px var(--critical); }
+    }
+
+    /* ── section ── */
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 14px;
+    }
+
+    /* ── service grid ── */
+    .service-grid {
+      display: grid;
+      gap: 2px;
+      margin-bottom: 48px;
+    }
+
+    .service-row {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      transition: background 0.15s, border-color 0.15s;
+      animation: fadeUp 0.5s ease both;
+      cursor: default;
+    }
+
+    .service-row:hover {
+      background: var(--bg-hover);
+      border-color: var(--border-hi);
+    }
+
+    .service-row.none     { border-left: 2px solid var(--green); }
+    .service-row.minor    { border-left: 2px solid var(--yellow); }
+    .service-row.major    { border-left: 2px solid var(--red); }
+    .service-row.critical { border-left: 2px solid var(--critical); }
+
+    .service-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-hi);
+    }
+
+    .service-desc {
+      font-size: 11px;
+      color: var(--text-dim);
+      margin-top: 3px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 400px;
+    }
+
+    .service-time {
+      font-size: 10px;
+      color: var(--text-dim);
+      white-space: nowrap;
+    }
+
+    .status-chip {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 3px;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .status-chip.none     { background: var(--green-dim);    color: var(--green); }
+    .status-chip.minor    { background: var(--yellow-dim);   color: var(--yellow); }
+    .status-chip.major    { background: var(--red-dim);      color: var(--red); }
+    .status-chip.critical { background: var(--critical-dim); color: var(--critical); }
+    .status-chip.loading  { background: #1a2530; color: var(--text-dim); }
+
+    /* ── incidents ── */
+    .incidents-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .incident-row {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: start;
+      gap: 14px;
+      padding: 14px 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .incident-type {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 3px;
+      white-space: nowrap;
+      margin-top: 1px;
+    }
+
+    .incident-type.degraded { background: var(--red-dim); color: var(--red); }
+    .incident-type.recovered { background: var(--green-dim); color: var(--green); }
+
+    .incident-content .service { font-size: 12px; font-weight: 500; color: var(--text-hi); }
+    .incident-content .desc    { font-size: 11px; color: var(--text-dim); margin-top: 3px; }
+    .incident-time { font-size: 10px; color: var(--text-dim); white-space: nowrap; }
+
+    .empty-state {
+      padding: 32px 20px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-dim);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+
+    /* ── footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 10px;
+      color: var(--text-dim);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    footer a:hover { text-decoration: underline; }
+
+    .refresh-btn {
+      background: none;
+      border: 1px solid var(--border-hi);
+      color: var(--text-dim);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      padding: 5px 12px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .refresh-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ── animations ── */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .spinner {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border: 1px solid var(--border-hi);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── responsive ── */
+    @media (max-width: 600px) {
+      .service-row { grid-template-columns: 1fr auto; }
+      .service-time { display: none; }
+      .service-desc { max-width: 180px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="header-top">
+      <div class="logo-area">
+        <h1>Service Status</h1>
+        <div class="sub">Real-time external service monitoring</div>
+      </div>
+      <div id="overall-badge" class="overall-badge ok">
+        <span class="spinner"></span>
+        <span id="overall-text">Loading…</span>
+      </div>
+    </div>
+    <div class="meta-row">
+      <div class="meta-item">Last checked: <span id="last-checked">—</span></div>
+      <div class="meta-item">Services: <span id="service-count">—</span></div>
+      <div class="meta-item">Incidents (24h): <span id="incident-count">—</span></div>
+    </div>
+  </header>
+
+  <div class="section-label">Services</div>
+  <div class="service-grid" id="service-grid">
+    <div class="service-row">
+      <div><div class="service-name">Loading…</div></div>
+      <div></div>
+      <div class="status-chip loading"><span class="spinner"></span> Fetching</div>
+    </div>
+  </div>
+
+  <div class="section-label">Recent Incidents</div>
+  <div class="incidents-list" id="incidents-list">
+    <div class="empty-state">Loading incidents…</div>
+  </div>
+
+  <footer style="margin-top:48px">
+    <div>
+      Powered by <a href="https://github.com/yoon-jinsung/service-status-monitor" target="_blank">service-status-monitor</a>
+      — Auto-refresh every 5 min
+    </div>
+    <button class="refresh-btn" onclick="loadAll()">↺ Refresh</button>
+  </footer>
+
+</div>
+
+<script>
+  const RAW = 'https://raw.githubusercontent.com/yoon-jinsung/service-status-monitor/main';
+
+  const INDICATOR_LABEL = {
+    none: 'Operational',
+    minor: 'Degraded',
+    major: 'Outage',
+    critical: 'Critical',
+  };
+
+  function fmt(isoStr) {
+    if (!isoStr) return '—';
+    const d = new Date(isoStr);
+    if (isNaN(d)) return isoStr;
+    return d.toLocaleString('ko-KR', {
+      timeZone: 'Asia/Seoul',
+      year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit',
+    });
+  }
+
+  function timeAgo(isoStr) {
+    if (!isoStr) return '';
+    const diff = Date.now() - new Date(isoStr).getTime();
+    const m = Math.floor(diff / 60000);
+    if (m < 1)  return 'just now';
+    if (m < 60) return `${m}m ago`;
+    const h = Math.floor(m / 60);
+    if (h < 24) return `${h}h ago`;
+    return `${Math.floor(h / 24)}d ago`;
+  }
+
+  function worstIndicator(services) {
+    const order = ['critical', 'major', 'minor', 'none'];
+    for (const level of order) {
+      if (Object.values(services).some(s => s.indicator === level)) return level;
+    }
+    return 'none';
+  }
+
+  async function loadAll() {
+    try {
+      const [stateRes, logsRes] = await Promise.allSettled([
+        fetch(`${RAW}/state/status.json?t=${Date.now()}`),
+        fetch(`${RAW}/logs/incidents.json?t=${Date.now()}`),
+      ]);
+
+      const state = stateRes.status === 'fulfilled' && stateRes.value.ok
+        ? await stateRes.value.json() : null;
+      const logs = logsRes.status === 'fulfilled' && logsRes.value.ok
+        ? await logsRes.value.json() : [];
+
+      renderState(state);
+      renderIncidents(logs);
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  function renderState(state) {
+    const grid = document.getElementById('service-grid');
+    const badge = document.getElementById('overall-badge');
+    const overallText = document.getElementById('overall-text');
+
+    if (!state || !state.services) {
+      grid.innerHTML = '<div class="empty-state">상태 데이터를 불러올 수 없습니다.</div>';
+      return;
+    }
+
+    document.getElementById('last-checked').textContent = fmt(state.lastChecked);
+    const entries = Object.entries(state.services);
+    document.getElementById('service-count').textContent = entries.length;
+
+    const worst = worstIndicator(state.services);
+    badge.className = `overall-badge ${worst === 'none' ? 'ok' : worst === 'minor' ? 'warn' : 'err'}`;
+    badge.innerHTML = `<span class="dot ${worst}"></span>
+      <span id="overall-text">${worst === 'none' ? 'All Systems Operational' : worst === 'minor' ? 'Partial Degradation' : worst === 'major' ? 'Service Outage' : 'Critical Incident'}</span>`;
+
+    grid.innerHTML = entries.map(([name, svc], i) => `
+      <div class="service-row ${svc.indicator}" style="animation-delay:${i * 50}ms">
+        <div>
+          <div class="service-name">${name}</div>
+          <div class="service-desc">${svc.description || '—'}</div>
+        </div>
+        <div class="service-time">${timeAgo(svc.lastChanged) || timeAgo(state.lastChecked)}</div>
+        <div class="status-chip ${svc.indicator}">
+          <span class="dot ${svc.indicator}"></span>
+          ${INDICATOR_LABEL[svc.indicator] || svc.indicator}
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function renderIncidents(logs) {
+    const list = document.getElementById('incidents-list');
+
+    // 최근 24시간
+    const since = Date.now() - 24 * 60 * 60 * 1000;
+    const recent = [...logs]
+      .filter(inc => new Date(inc.detectedAt).getTime() > since || isNaN(new Date(inc.detectedAt).getTime()))
+      .reverse()
+      .slice(0, 10);
+
+    document.getElementById('incident-count').textContent = recent.length;
+
+    if (recent.length === 0) {
+      list.innerHTML = '<div class="empty-state">No incidents in the last 24 hours.</div>';
+      return;
+    }
+
+    list.innerHTML = recent.map((inc, i) => `
+      <div class="incident-row" style="animation-delay:${i * 40}ms">
+        <span class="incident-type ${inc.type}">${inc.type}</span>
+        <div class="incident-content">
+          <div class="service">${inc.service}</div>
+          <div class="desc">${inc.description || '—'}</div>
+        </div>
+        <div class="incident-time">${fmt(inc.detectedAt)}</div>
+      </div>
+    `).join('');
+  }
+
+  loadAll();
+  setInterval(loadAll, 5 * 60 * 1000);
+</script>
+</body>
+</html>

@@ -15,7 +15,17 @@ const INDICATOR_LABEL: Record<Indicator, string> = {
 };
 
 function formatKST(date: Date): string {
-  return date.toLocaleString("ko-KR", { timeZone: "Asia/Seoul" });
+  return date.toLocaleString("en-US", {
+    timeZone: "Asia/Seoul",
+    year: "numeric",
+    month: "short",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+    timeZoneName: "short",
+  });
 }
 
 function buildDegradedBlocks(change: StatusChange, now: Date) {

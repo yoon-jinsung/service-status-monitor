@@ -202,6 +202,12 @@
       transition: background 0.15s, border-color 0.15s;
       animation: fadeUp 0.5s ease both;
       cursor: default;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    a.service-row {
+      cursor: pointer;
     }
 
     .service-row:hover {
@@ -457,24 +463,34 @@
 
   async function loadAll() {
     try {
-      const [stateRes, logsRes] = await Promise.allSettled([
+      const [stateRes, logsRes, configRes] = await Promise.allSettled([
         fetch(`${RAW}/state/status.json?t=${Date.now()}`),
         fetch(`${RAW}/logs/incidents.json?t=${Date.now()}`),
+        fetch(`${RAW}/config/services.json?t=${Date.now()}`),
       ]);
 
       const state = stateRes.status === 'fulfilled' && stateRes.value.ok
         ? await stateRes.value.json() : null;
       const logs = logsRes.status === 'fulfilled' && logsRes.value.ok
         ? await logsRes.value.json() : [];
+      const config = configRes.status === 'fulfilled' && configRes.value.ok
+        ? await configRes.value.json() : null;
 
-      renderState(state);
+      const urlMap = {};
+      if (config && config.services) {
+        for (const svc of config.services) {
+          if (svc.baseUrl) urlMap[svc.name] = svc.baseUrl;
+        }
+      }
+
+      renderState(state, urlMap);
       renderIncidents(logs);
     } catch (e) {
       console.error(e);
     }
   }
 
-  function renderState(state) {
+  function renderState(state, urlMap = {}) {
     const grid = document.getElementById('service-grid');
     const badge = document.getElementById('overall-badge');
     const overallText = document.getElementById('overall-text');
@@ -493,8 +509,12 @@
     badge.innerHTML = `<span class="dot ${worst}"></span>
       <span id="overall-text">${worst === 'none' ? 'All Systems Operational' : worst === 'minor' ? 'Partial Degradation' : worst === 'major' ? 'Service Outage' : 'Critical Incident'}</span>`;
 
-    grid.innerHTML = entries.map(([name, svc], i) => `
-      <div class="service-row ${svc.indicator}" style="animation-delay:${i * 50}ms">
+    grid.innerHTML = entries.map(([name, svc], i) => {
+      const url = urlMap[name];
+      const tag = url ? 'a' : 'div';
+      const attrs = url ? `href="${url}" target="_blank" rel="noopener noreferrer"` : '';
+      return `
+      <${tag} ${attrs} class="service-row ${svc.indicator}" style="animation-delay:${i * 50}ms">
         <div>
           <div class="service-name">${name}</div>
           <div class="service-desc">${svc.description || '—'}</div>
@@ -504,8 +524,9 @@
           <span class="dot ${svc.indicator}"></span>
           ${INDICATOR_LABEL[svc.indicator] || svc.indicator}
         </div>
-      </div>
-    `).join('');
+      </${tag}>
+    `;
+    }).join('');
   }
 
   function renderIncidents(logs) {

@@ -169,5 +169,14 @@
     "current": "minor",
     "description": "Minor Service Outage",
     "detectedAt": "2026. 4. 1. AM 12:10:28"
+  },
+  {
+    "id": "2bfad0e2-0d68-4e1b-a044-a3d56d838e22",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partially Degraded Service",
+    "detectedAt": "2026. 4. 1. AM 4:45:21"
   }
 ]

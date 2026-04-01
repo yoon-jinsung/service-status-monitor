@@ -241,5 +241,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 4. 1. PM 7:05:19"
+  },
+  {
+    "id": "4e756fa3-b650-4397-bd38-dafc3c4d272b",
+    "service": "GitHub",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Minor Service Outage",
+    "detectedAt": "2026. 4. 1. PM 7:15:21"
   }
 ]

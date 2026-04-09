@@ -412,5 +412,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 4. 9. AM 2:55:41"
+  },
+  {
+    "id": "9575ecc0-93f1-4928-adb4-7d42691d3b49",
+    "service": "Slack",
+    "type": "degraded",
+    "previous": "none",
+    "current": "major",
+    "description": "Slack status: active",
+    "detectedAt": "2026. 4. 9. PM 5:00:31"
   }
 ]

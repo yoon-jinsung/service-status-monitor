@@ -1,19 +1,19 @@
 {
-  "lastChecked": "2026-04-09T07:30:28.592Z",
+  "lastChecked": "2026-04-09T07:35:17.773Z",
   "services": {
     "GitHub": {
       "indicator": "none",
       "description": "All Systems Operational",
       "lastChanged": "2026-04-01T11:00:28.431Z",
       "lastNotified": "2026-04-01T11:00:28.431Z",
-      "consecutiveFailures": 1
+      "consecutiveFailures": 0
     },
     "Notion": {
       "indicator": "none",
       "description": "All Systems Operational",
       "lastChanged": "",
       "lastNotified": "",
-      "consecutiveFailures": 7
+      "consecutiveFailures": 0
     },
     "Slack": {
       "indicator": "none",
@@ -41,7 +41,7 @@
       "description": "All Systems Operational",
       "lastChanged": "2026-04-08T17:55:41.698Z",
       "lastNotified": "2026-04-08T17:55:41.698Z",
-      "consecutiveFailures": 1
+      "consecutiveFailures": 0
     }
   }
 }

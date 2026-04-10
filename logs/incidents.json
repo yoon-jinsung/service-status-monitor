@@ -466,5 +466,14 @@
     "current": "none",
     "description": "Slack is operating normally",
     "detectedAt": "2026. 4. 10. AM 4:30:29"
+  },
+  {
+    "id": "fcc8cdfc-cba0-48f8-927d-a88b2210519c",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partially Degraded Service",
+    "detectedAt": "2026. 4. 10. PM 1:30:23"
   }
 ]

@@ -484,5 +484,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 4. 10. PM 1:40:27"
+  },
+  {
+    "id": "fc7b2c27-9e0b-4b8d-9532-f3e01f085f23",
+    "service": "Notion",
+    "type": "degraded",
+    "previous": "none",
+    "current": "critical",
+    "description": "Service Under Maintenance",
+    "detectedAt": "2026. 4. 11. AM 1:00:29"
   }
 ]

@@ -493,5 +493,14 @@
     "current": "critical",
     "description": "Service Under Maintenance",
     "detectedAt": "2026. 4. 11. AM 1:00:29"
+  },
+  {
+    "id": "a223cfee-c94b-4de0-939c-88c534cd816a",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Minor Service Outage",
+    "detectedAt": "2026. 4. 11. AM 1:35:17"
   }
 ]

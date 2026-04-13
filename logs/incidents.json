@@ -538,5 +538,14 @@
     "current": "major",
     "description": "Partial System Outage",
     "detectedAt": "2026. 4. 14. AM 12:45:23"
+  },
+  {
+    "id": "dc67db8f-2e30-48eb-89c8-1561b99010d7",
+    "service": "Claude",
+    "type": "recovered",
+    "previous": "major",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 4. 14. AM 1:40:20"
   }
 ]

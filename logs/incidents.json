@@ -664,5 +664,14 @@
     "current": "minor",
     "description": "Minor Service Outage",
     "detectedAt": "2026. 4. 17. AM 12:10:27"
+  },
+  {
+    "id": "39481470-63f6-42b9-accd-82c6b7f461f8",
+    "service": "GitHub",
+    "type": "degraded",
+    "previous": "minor",
+    "current": "major",
+    "description": "Partial System Outage",
+    "detectedAt": "2026. 4. 17. AM 12:45:29"
   }
 ]

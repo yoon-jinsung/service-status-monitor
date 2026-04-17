@@ -727,5 +727,14 @@
     "current": "major",
     "description": "Partial System Outage",
     "detectedAt": "2026. 4. 17. PM 1:55:17"
+  },
+  {
+    "id": "bdecf9e8-df8b-4f51-84e6-fff4824f1818",
+    "service": "Notion",
+    "type": "degraded",
+    "previous": "major",
+    "current": "minor",
+    "description": "Partial System Degradation",
+    "detectedAt": "2026. 4. 17. PM 3:15:19"
   }
 ]

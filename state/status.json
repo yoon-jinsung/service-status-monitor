@@ -1,5 +1,5 @@
 {
-  "lastChecked": "2026-04-19T18:20:17.540Z",
+  "lastChecked": "2026-04-19T18:25:20.081Z",
   "services": {
     "GitHub": {
       "indicator": "none",
@@ -9,10 +9,10 @@
       "consecutiveFailures": 0
     },
     "Notion": {
-      "indicator": "minor",
-      "description": "Partial System Degradation",
-      "lastChanged": "2026-04-19T17:25:18.276Z",
-      "lastNotified": "2026-04-19T17:25:18.276Z",
+      "indicator": "none",
+      "description": "All Systems Operational",
+      "lastChanged": "2026-04-19T18:25:20.081Z",
+      "lastNotified": "2026-04-19T18:25:20.081Z",
       "consecutiveFailures": 0
     },
     "Slack": {

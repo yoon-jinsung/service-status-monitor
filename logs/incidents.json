@@ -808,5 +808,14 @@
     "current": "major",
     "description": "Partial System Outage",
     "detectedAt": "2026. 4. 20. PM 3:15:17"
+  },
+  {
+    "id": "6ba1dba0-273d-48fb-8e0c-26f9352df63c",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "major",
+    "current": "minor",
+    "description": "Partially Degraded Service",
+    "detectedAt": "2026. 4. 20. PM 3:40:23"
   }
 ]

@@ -871,5 +871,14 @@
     "current": "major",
     "description": "Slack status: active",
     "detectedAt": "2026. 4. 21. PM 10:50:22"
+  },
+  {
+    "id": "d3cba61d-7248-4853-85dc-04b82507a050",
+    "service": "Slack",
+    "type": "recovered",
+    "previous": "major",
+    "current": "none",
+    "description": "Slack is operating normally",
+    "detectedAt": "2026. 4. 22. AM 12:50:30"
   }
 ]

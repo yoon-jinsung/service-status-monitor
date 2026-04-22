@@ -889,5 +889,14 @@
     "current": "major",
     "description": "Partial System Outage",
     "detectedAt": "2026. 4. 22. PM 4:00:28"
+  },
+  {
+    "id": "c893c766-cc81-4f50-bd70-ee478e8c3d76",
+    "service": "Notion",
+    "type": "recovered",
+    "previous": "major",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 4. 22. PM 4:50:20"
   }
 ]

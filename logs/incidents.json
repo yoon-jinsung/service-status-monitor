@@ -880,5 +880,14 @@
     "current": "none",
     "description": "Slack is operating normally",
     "detectedAt": "2026. 4. 22. AM 12:50:30"
+  },
+  {
+    "id": "7e4c926e-738e-4b83-aa3a-90bde2e14403",
+    "service": "Notion",
+    "type": "degraded",
+    "previous": "none",
+    "current": "major",
+    "description": "Partial System Outage",
+    "detectedAt": "2026. 4. 22. PM 4:00:28"
   }
 ]

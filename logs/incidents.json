@@ -943,5 +943,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 4. 23. AM 10:00:28"
+  },
+  {
+    "id": "813a28c5-f4cb-4b4d-9b7a-c916060a1d99",
+    "service": "Notion",
+    "type": "recovered",
+    "previous": "major",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 4. 23. PM 4:10:23"
   }
 ]

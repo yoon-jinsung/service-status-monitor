@@ -1051,5 +1051,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 4. 24. AM 5:50:18"
+  },
+  {
+    "id": "8e63db76-e988-4c84-91b1-7d9cff0efadc",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "critical",
+    "description": "Major System Outage",
+    "detectedAt": "2026. 4. 24. PM 12:00:32"
   }
 ]

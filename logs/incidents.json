@@ -1213,5 +1213,14 @@
     "current": "minor",
     "description": "Partially Degraded Service",
     "detectedAt": "2026. 4. 28. AM 5:10:22"
+  },
+  {
+    "id": "53e7c99d-0b4f-4c07-af1a-ad1cfcba4fae",
+    "service": "Slack",
+    "type": "recovered",
+    "previous": "major",
+    "current": "none",
+    "description": "Slack is operating normally",
+    "detectedAt": "2026. 4. 28. AM 5:40:20"
   }
 ]

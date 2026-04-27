@@ -1195,5 +1195,14 @@
     "current": "major",
     "description": "Slack status: active",
     "detectedAt": "2026. 4. 28. AM 2:15:27"
+  },
+  {
+    "id": "1aaff31e-c788-420c-9e25-c7d12fc459aa",
+    "service": "GitHub",
+    "type": "degraded",
+    "previous": "minor",
+    "current": "major",
+    "description": "Partial System Outage",
+    "detectedAt": "2026. 4. 28. AM 3:20:26"
   }
 ]

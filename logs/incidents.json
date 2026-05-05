@@ -1501,5 +1501,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 5. 6. AM 3:30:33"
+  },
+  {
+    "id": "ecf728c9-046a-46f4-aa08-22e4a104c61a",
+    "service": "Notion",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 5. 6. AM 4:35:25"
   }
 ]

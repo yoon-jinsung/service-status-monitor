@@ -1537,5 +1537,14 @@
     "current": "minor",
     "description": "Partially Degraded Service",
     "detectedAt": "2026. 5. 7. AM 12:25:35"
+  },
+  {
+    "id": "31f7b2cb-e8af-40c2-85f6-e9f2db5adea1",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Minor Service Outage",
+    "detectedAt": "2026. 5. 7. AM 12:30:34"
   }
 ]

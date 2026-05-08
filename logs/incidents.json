@@ -1708,5 +1708,14 @@
     "current": "minor",
     "description": "Minor Service Outage",
     "detectedAt": "2026. 5. 9. AM 7:35:29"
+  },
+  {
+    "id": "2156d243-7242-490d-806f-6e9b73ee820f",
+    "service": "Slack",
+    "type": "recovered",
+    "previous": "major",
+    "current": "none",
+    "description": "Slack is operating normally",
+    "detectedAt": "2026. 5. 9. AM 8:30:28"
   }
 ]

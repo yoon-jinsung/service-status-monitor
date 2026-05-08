@@ -1699,5 +1699,14 @@
     "current": "major",
     "description": "Slack status: active",
     "detectedAt": "2026. 5. 9. AM 3:35:27"
+  },
+  {
+    "id": "be969557-12a7-4979-98af-6f2d2208da39",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Minor Service Outage",
+    "detectedAt": "2026. 5. 9. AM 7:35:29"
   }
 ]

@@ -1690,5 +1690,14 @@
     "current": "none",
     "description": "Slack is operating normally",
     "detectedAt": "2026. 5. 9. AM 2:45:27"
+  },
+  {
+    "id": "70f8d38b-0467-4aec-b5c6-620f042344bd",
+    "service": "Slack",
+    "type": "degraded",
+    "previous": "none",
+    "current": "major",
+    "description": "Slack status: active",
+    "detectedAt": "2026. 5. 9. AM 3:35:27"
   }
 ]

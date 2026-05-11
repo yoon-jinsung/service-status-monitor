@@ -1807,5 +1807,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 5. 11. PM 11:35:29"
+  },
+  {
+    "id": "2e6643b0-6259-486a-a843-209eabf668f2",
+    "service": "Slack",
+    "type": "recovered",
+    "previous": "major",
+    "current": "none",
+    "description": "Slack is operating normally",
+    "detectedAt": "2026. 5. 12. AM 6:50:21"
   }
 ]

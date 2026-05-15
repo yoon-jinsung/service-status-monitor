@@ -2014,5 +2014,14 @@
     "current": "major",
     "description": "Partial System Outage",
     "detectedAt": "2026. 5. 15. PM 5:15:25"
+  },
+  {
+    "id": "2cb3fa01-8c8a-4d5e-9468-09d931f3162b",
+    "service": "GitHub",
+    "type": "recovered",
+    "previous": "major",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 5. 15. PM 5:30:33"
   }
 ]

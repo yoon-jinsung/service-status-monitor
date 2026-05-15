@@ -1987,5 +1987,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 5. 15. AM 6:10:32"
+  },
+  {
+    "id": "eb5176f5-663c-4a78-892d-9eef90507664",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Minor Service Outage",
+    "detectedAt": "2026. 5. 15. AM 9:20:23"
   }
 ]

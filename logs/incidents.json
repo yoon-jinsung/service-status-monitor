@@ -2005,5 +2005,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 5. 15. AM 10:50:24"
+  },
+  {
+    "id": "9956cc33-be2a-492d-8491-1c5891b773ff",
+    "service": "GitHub",
+    "type": "degraded",
+    "previous": "none",
+    "current": "major",
+    "description": "Partial System Outage",
+    "detectedAt": "2026. 5. 15. PM 5:15:25"
   }
 ]

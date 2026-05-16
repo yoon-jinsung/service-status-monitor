@@ -2023,5 +2023,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 5. 15. PM 5:30:33"
+  },
+  {
+    "id": "03b3f942-2205-4a7c-a418-d6d2063c05a9",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Minor Service Outage",
+    "detectedAt": "2026. 5. 17. AM 3:10:22"
   }
 ]

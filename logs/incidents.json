@@ -2131,5 +2131,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 5. 19. PM 7:10:25"
+  },
+  {
+    "id": "2476938a-d003-4ed5-bcc0-7ddb25782469",
+    "service": "Notion",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partial System Degradation",
+    "detectedAt": "2026. 5. 19. PM 10:40:35"
   }
 ]

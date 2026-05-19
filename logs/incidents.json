@@ -2140,5 +2140,14 @@
     "current": "minor",
     "description": "Partial System Degradation",
     "detectedAt": "2026. 5. 19. PM 10:40:35"
+  },
+  {
+    "id": "289c153f-0209-4454-b3c0-83471b1bfd7d",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Minor Service Outage",
+    "detectedAt": "2026. 5. 19. PM 11:05:25"
   }
 ]

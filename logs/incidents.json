@@ -2185,5 +2185,14 @@
     "current": "minor",
     "description": "Partially Degraded Service",
     "detectedAt": "2026. 5. 20. PM 5:15:24"
+  },
+  {
+    "id": "c14f7672-17a1-4592-be65-5c183dac420f",
+    "service": "Notion",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 5. 20. PM 5:40:23"
   }
 ]

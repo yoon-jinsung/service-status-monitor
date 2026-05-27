@@ -1,5 +1,5 @@
 {
-  "lastChecked": "2026-05-27T23:00:32.653Z",
+  "lastChecked": "2026-05-27T23:10:22.436Z",
   "services": {
     "GitHub": {
       "indicator": "none",
@@ -16,10 +16,10 @@
       "consecutiveFailures": 0
     },
     "Slack": {
-      "indicator": "none",
-      "description": "Slack is operating normally",
-      "lastChanged": "2026-05-19T22:30:26.298Z",
-      "lastNotified": "2026-05-19T22:30:26.298Z",
+      "indicator": "major",
+      "description": "Slack status: active",
+      "lastChanged": "2026-05-27T23:10:22.436Z",
+      "lastNotified": "2026-05-27T23:10:22.436Z",
       "consecutiveFailures": 0
     },
     "API Gateway (Seoul)": {

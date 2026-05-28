@@ -1,11 +1,11 @@
 {
-  "lastChecked": "2026-05-28T01:10:28.624Z",
+  "lastChecked": "2026-05-28T01:15:23.223Z",
   "services": {
     "GitHub": {
-      "indicator": "none",
-      "description": "All Systems Operational",
-      "lastChanged": "2026-05-27T13:20:26.405Z",
-      "lastNotified": "2026-05-27T13:20:26.405Z",
+      "indicator": "minor",
+      "description": "Partially Degraded Service",
+      "lastChanged": "2026-05-28T01:15:23.223Z",
+      "lastNotified": "2026-05-28T01:15:23.223Z",
       "consecutiveFailures": 0
     },
     "Notion": {

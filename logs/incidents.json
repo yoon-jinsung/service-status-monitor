@@ -2518,5 +2518,23 @@
     "current": "minor",
     "description": "Minor Service Outage",
     "detectedAt": "2026. 5. 29. AM 4:05:20"
+  },
+  {
+    "id": "fdb31e8c-3888-40dc-a29b-c8d47fbbadfa",
+    "service": "GitHub",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partially Degraded Service",
+    "detectedAt": "2026. 5. 29. AM 4:25:22"
+  },
+  {
+    "id": "29b7b06b-56e1-4993-ae19-36a378c09fd9",
+    "service": "Claude",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 5. 29. AM 4:25:22"
   }
 ]

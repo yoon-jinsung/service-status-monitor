@@ -1,5 +1,5 @@
 {
-  "lastChecked": "2026-06-01T18:40:24.540Z",
+  "lastChecked": "2026-06-01T18:45:26.563Z",
   "services": {
     "GitHub": {
       "indicator": "none",
@@ -37,10 +37,10 @@
       "consecutiveFailures": 0
     },
     "Claude": {
-      "indicator": "none",
-      "description": "All Systems Operational",
-      "lastChanged": "2026-06-01T18:40:24.540Z",
-      "lastNotified": "2026-06-01T18:40:24.540Z",
+      "indicator": "minor",
+      "description": "Partially Degraded Service",
+      "lastChanged": "2026-06-01T18:45:26.563Z",
+      "lastNotified": "2026-06-01T18:45:26.563Z",
       "consecutiveFailures": 0
     }
   }

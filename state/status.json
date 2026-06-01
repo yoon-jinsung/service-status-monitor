@@ -1,5 +1,5 @@
 {
-  "lastChecked": "2026-06-01T14:20:27.766Z",
+  "lastChecked": "2026-06-01T14:25:39.868Z",
   "services": {
     "GitHub": {
       "indicator": "none",
@@ -27,14 +27,14 @@
       "description": "All Systems Operational",
       "lastChanged": "",
       "lastNotified": "",
-      "consecutiveFailures": 0
+      "consecutiveFailures": 1
     },
     "API Gateway (Tokyo)": {
       "indicator": "none",
       "description": "All Systems Operational",
       "lastChanged": "",
       "lastNotified": "",
-      "consecutiveFailures": 0
+      "consecutiveFailures": 1
     },
     "Claude": {
       "indicator": "none",

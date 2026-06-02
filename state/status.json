@@ -1,12 +1,12 @@
 {
-  "lastChecked": "2026-06-02T07:15:27.422Z",
+  "lastChecked": "2026-06-02T07:20:21.988Z",
   "services": {
     "GitHub": {
       "indicator": "none",
       "description": "All Systems Operational",
       "lastChanged": "2026-05-28T20:45:25.067Z",
       "lastNotified": "2026-05-28T20:45:25.067Z",
-      "consecutiveFailures": 0
+      "consecutiveFailures": 1
     },
     "Notion": {
       "indicator": "none",
@@ -41,7 +41,7 @@
       "description": "Minor Service Outage",
       "lastChanged": "2026-06-02T06:05:21.729Z",
       "lastNotified": "2026-06-02T06:05:21.729Z",
-      "consecutiveFailures": 0
+      "consecutiveFailures": 1
     }
   }
 }

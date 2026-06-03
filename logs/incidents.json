@@ -2770,5 +2770,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 6. 3. PM 3:40:25"
+  },
+  {
+    "id": "fb9a5934-7c64-43f8-a9de-9479b2c0e3bf",
+    "service": "Claude",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 6. 3. PM 4:30:27"
   }
 ]

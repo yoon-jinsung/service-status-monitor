@@ -2761,5 +2761,14 @@
     "current": "minor",
     "description": "Minor Service Outage",
     "detectedAt": "2026. 6. 3. PM 1:20:26"
+  },
+  {
+    "id": "8af3a8e4-8f75-4f06-a317-c6c4c7b42796",
+    "service": "Notion",
+    "type": "recovered",
+    "previous": "major",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 6. 3. PM 3:40:25"
   }
 ]

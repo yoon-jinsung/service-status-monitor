@@ -1,12 +1,12 @@
 {
-  "lastChecked": "2026-06-03T00:55:20.537Z",
+  "lastChecked": "2026-06-03T01:00:36.016Z",
   "services": {
     "GitHub": {
       "indicator": "none",
       "description": "All Systems Operational",
       "lastChanged": "2026-05-28T20:45:25.067Z",
       "lastNotified": "2026-05-28T20:45:25.067Z",
-      "consecutiveFailures": 0
+      "consecutiveFailures": 1
     },
     "Notion": {
       "indicator": "none",
@@ -16,10 +16,10 @@
       "consecutiveFailures": 0
     },
     "Slack": {
-      "indicator": "none",
-      "description": "Slack is operating normally",
-      "lastChanged": "2026-06-01T03:10:22.576Z",
-      "lastNotified": "2026-06-01T03:10:22.576Z",
+      "indicator": "major",
+      "description": "Slack status: active",
+      "lastChanged": "2026-06-03T01:00:36.016Z",
+      "lastNotified": "2026-06-03T01:00:36.016Z",
       "consecutiveFailures": 0
     },
     "API Gateway (Seoul)": {
@@ -41,7 +41,7 @@
       "description": "All Systems Operational",
       "lastChanged": "2026-06-02T10:45:23.461Z",
       "lastNotified": "2026-06-02T10:45:23.461Z",
-      "consecutiveFailures": 0
+      "consecutiveFailures": 1
     }
   }
 }

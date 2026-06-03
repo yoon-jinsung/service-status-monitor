@@ -1,18 +1,18 @@
 {
-  "lastChecked": "2026-06-03T04:00:31.452Z",
+  "lastChecked": "2026-06-03T04:05:23.514Z",
   "services": {
     "GitHub": {
       "indicator": "none",
       "description": "All Systems Operational",
       "lastChanged": "2026-05-28T20:45:25.067Z",
       "lastNotified": "2026-05-28T20:45:25.067Z",
-      "consecutiveFailures": 0
+      "consecutiveFailures": 1
     },
     "Notion": {
-      "indicator": "none",
-      "description": "All Systems Operational",
-      "lastChanged": "2026-05-26T04:35:17.630Z",
-      "lastNotified": "2026-05-26T04:35:17.630Z",
+      "indicator": "major",
+      "description": "Partial System Outage",
+      "lastChanged": "2026-06-03T04:05:23.514Z",
+      "lastNotified": "2026-06-03T04:05:23.514Z",
       "consecutiveFailures": 0
     },
     "Slack": {
@@ -41,7 +41,7 @@
       "description": "All Systems Operational",
       "lastChanged": "2026-06-02T10:45:23.461Z",
       "lastNotified": "2026-06-02T10:45:23.461Z",
-      "consecutiveFailures": 0
+      "consecutiveFailures": 1
     }
   }
 }

@@ -1,18 +1,18 @@
 {
-  "lastChecked": "2026-06-04T05:20:29.144Z",
+  "lastChecked": "2026-06-04T05:25:20.053Z",
   "services": {
     "GitHub": {
       "indicator": "none",
       "description": "All Systems Operational",
       "lastChanged": "2026-05-28T20:45:25.067Z",
       "lastNotified": "2026-05-28T20:45:25.067Z",
-      "consecutiveFailures": 1
+      "consecutiveFailures": 0
     },
     "Notion": {
-      "indicator": "minor",
-      "description": "Partial System Degradation",
-      "lastChanged": "2026-06-04T02:45:24.814Z",
-      "lastNotified": "2026-06-04T02:45:24.814Z",
+      "indicator": "none",
+      "description": "All Systems Operational",
+      "lastChanged": "2026-06-04T05:25:20.053Z",
+      "lastNotified": "2026-06-04T05:25:20.053Z",
       "consecutiveFailures": 0
     },
     "Slack": {
@@ -41,7 +41,7 @@
       "description": "All Systems Operational",
       "lastChanged": "2026-06-03T07:30:27.407Z",
       "lastNotified": "2026-06-03T07:30:27.407Z",
-      "consecutiveFailures": 1
+      "consecutiveFailures": 0
     }
   }
 }

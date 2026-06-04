@@ -2797,5 +2797,14 @@
     "current": "none",
     "description": "Slack is operating normally",
     "detectedAt": "2026. 6. 4. AM 2:35:26"
+  },
+  {
+    "id": "050506a2-18c9-4106-9a14-70e5f24c9875",
+    "service": "Notion",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partial System Degradation",
+    "detectedAt": "2026. 6. 4. AM 11:45:24"
   }
 ]

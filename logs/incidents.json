@@ -2878,5 +2878,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 6. 6. AM 2:30:27"
+  },
+  {
+    "id": "eca9228c-1493-4df9-95a4-8c69f637259b",
+    "service": "Notion",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 6. 6. AM 2:40:27"
   }
 ]

@@ -2869,5 +2869,14 @@
     "current": "minor",
     "description": "Minor Service Outage",
     "detectedAt": "2026. 6. 6. AM 2:20:25"
+  },
+  {
+    "id": "e1309f10-a8ac-4780-a5d7-c3e99c78aa4e",
+    "service": "Claude",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 6. 6. AM 2:30:27"
   }
 ]

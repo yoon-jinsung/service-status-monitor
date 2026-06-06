@@ -2905,5 +2905,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 6. 6. PM 7:00:31"
+  },
+  {
+    "id": "e9ea4548-f6b8-493b-90d5-55bf4ed4267c",
+    "service": "GitHub",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partially Degraded Service",
+    "detectedAt": "2026. 6. 7. AM 2:00:31"
   }
 ]

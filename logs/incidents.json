@@ -2914,5 +2914,14 @@
     "current": "minor",
     "description": "Partially Degraded Service",
     "detectedAt": "2026. 6. 7. AM 2:00:31"
+  },
+  {
+    "id": "f349fb1c-b94e-44ae-bfd9-62faedae2cf6",
+    "service": "GitHub",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 6. 7. AM 2:10:23"
   }
 ]

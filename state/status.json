@@ -1,12 +1,12 @@
 {
-  "lastChecked": "2026-06-07T12:45:26.576Z",
+  "lastChecked": "2026-06-07T12:50:36.458Z",
   "services": {
     "GitHub": {
       "indicator": "none",
       "description": "All Systems Operational",
       "lastChanged": "2026-06-06T17:10:23.445Z",
       "lastNotified": "2026-06-06T17:10:23.445Z",
-      "consecutiveFailures": 0
+      "consecutiveFailures": 1
     },
     "Notion": {
       "indicator": "none",
@@ -27,21 +27,21 @@
       "description": "All Systems Operational",
       "lastChanged": "",
       "lastNotified": "",
-      "consecutiveFailures": 0
+      "consecutiveFailures": 1
     },
     "API Gateway (Tokyo)": {
       "indicator": "none",
       "description": "All Systems Operational",
       "lastChanged": "",
       "lastNotified": "",
-      "consecutiveFailures": 0
+      "consecutiveFailures": 1
     },
     "Claude": {
       "indicator": "none",
       "description": "All Systems Operational",
       "lastChanged": "2026-06-07T04:30:31.169Z",
       "lastNotified": "2026-06-07T04:30:31.169Z",
-      "consecutiveFailures": 0
+      "consecutiveFailures": 1
     }
   }
 }

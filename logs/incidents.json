@@ -3067,5 +3067,14 @@
     "current": "major",
     "description": "Slack status: active",
     "detectedAt": "2026. 6. 9. AM 4:00:38"
+  },
+  {
+    "id": "16532908-bd5b-41f3-b435-3d231f0c0aa2",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partially Degraded Service",
+    "detectedAt": "2026. 6. 9. AM 4:15:23"
   }
 ]

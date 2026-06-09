@@ -3157,5 +3157,14 @@
     "current": "major",
     "description": "Slack status: active",
     "detectedAt": "2026. 6. 10. AM 12:30:36"
+  },
+  {
+    "id": "af579be0-f4ef-406f-be40-3375466c90e7",
+    "service": "Notion",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partial System Degradation",
+    "detectedAt": "2026. 6. 10. AM 1:35:26"
   }
 ]

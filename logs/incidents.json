@@ -3130,5 +3130,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 6. 9. AM 7:40:26"
+  },
+  {
+    "id": "51a26ec3-c124-4ba8-85a6-fd53a1a8a33b",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partially Degraded Service",
+    "detectedAt": "2026. 6. 9. PM 12:15:26"
   }
 ]

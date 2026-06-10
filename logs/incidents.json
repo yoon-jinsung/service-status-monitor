@@ -3238,5 +3238,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 6. 11. AM 1:25:27"
+  },
+  {
+    "id": "3b46ef73-fd2f-4bf0-97a5-38a8185fbb6b",
+    "service": "GitHub",
+    "type": "recovered",
+    "previous": "major",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 6. 11. AM 1:40:27"
   }
 ]

@@ -3301,5 +3301,14 @@
     "current": "minor",
     "description": "Partially Degraded Service",
     "detectedAt": "2026. 6. 12. AM 4:45:27"
+  },
+  {
+    "id": "a9f9580f-a3c9-4cf4-9e6b-177e0a15fe9d",
+    "service": "GitHub",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 6. 12. AM 5:00:44"
   }
 ]

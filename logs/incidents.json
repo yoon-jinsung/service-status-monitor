@@ -3319,5 +3319,14 @@
     "current": "major",
     "description": "Slack status: active",
     "detectedAt": "2026. 6. 12. AM 7:15:28"
+  },
+  {
+    "id": "48f589c7-ae2d-466e-b83c-a3a0bed6e08a",
+    "service": "Slack",
+    "type": "recovered",
+    "previous": "major",
+    "current": "none",
+    "description": "Slack is operating normally",
+    "detectedAt": "2026. 6. 12. AM 8:20:27"
   }
 ]

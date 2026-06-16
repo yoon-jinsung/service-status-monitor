@@ -1,12 +1,12 @@
 {
-  "lastChecked": "2026-06-16T20:50:32.804Z",
+  "lastChecked": "2026-06-16T20:55:33.240Z",
   "services": {
     "GitHub": {
       "indicator": "none",
       "description": "All Systems Operational",
       "lastChanged": "2026-06-16T18:05:30.494Z",
       "lastNotified": "2026-06-16T18:05:30.494Z",
-      "consecutiveFailures": 1
+      "consecutiveFailures": 0
     },
     "Notion": {
       "indicator": "none",
@@ -37,11 +37,11 @@
       "consecutiveFailures": 0
     },
     "Claude": {
-      "indicator": "none",
-      "description": "All Systems Operational",
-      "lastChanged": "2026-06-16T19:25:29.420Z",
-      "lastNotified": "2026-06-16T19:25:29.420Z",
-      "consecutiveFailures": 1
+      "indicator": "minor",
+      "description": "Minor Service Outage",
+      "lastChanged": "2026-06-16T20:55:33.240Z",
+      "lastNotified": "2026-06-16T20:55:33.240Z",
+      "consecutiveFailures": 0
     }
   }
 }

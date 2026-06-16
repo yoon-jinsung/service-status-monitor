@@ -1,5 +1,5 @@
 {
-  "lastChecked": "2026-06-16T21:35:38.750Z",
+  "lastChecked": "2026-06-16T21:40:35.446Z",
   "services": {
     "GitHub": {
       "indicator": "none",
@@ -37,10 +37,10 @@
       "consecutiveFailures": 0
     },
     "Claude": {
-      "indicator": "minor",
-      "description": "Minor Service Outage",
-      "lastChanged": "2026-06-16T20:55:33.240Z",
-      "lastNotified": "2026-06-16T20:55:33.240Z",
+      "indicator": "none",
+      "description": "All Systems Operational",
+      "lastChanged": "2026-06-16T21:40:35.446Z",
+      "lastNotified": "2026-06-16T21:40:35.446Z",
       "consecutiveFailures": 0
     }
   }

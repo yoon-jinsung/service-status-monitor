@@ -1,12 +1,12 @@
 {
-  "lastChecked": "2026-06-17T05:40:28.944Z",
+  "lastChecked": "2026-06-17T05:45:31.861Z",
   "services": {
     "GitHub": {
       "indicator": "none",
       "description": "All Systems Operational",
       "lastChanged": "2026-06-17T04:45:38.976Z",
       "lastNotified": "2026-06-17T04:45:38.976Z",
-      "consecutiveFailures": 0
+      "consecutiveFailures": 1
     },
     "Notion": {
       "indicator": "none",
@@ -41,7 +41,7 @@
       "description": "Partially Degraded Service",
       "lastChanged": "2026-06-17T05:10:39.276Z",
       "lastNotified": "2026-06-17T05:10:39.276Z",
-      "consecutiveFailures": 0
+      "consecutiveFailures": 1
     }
   }
 }

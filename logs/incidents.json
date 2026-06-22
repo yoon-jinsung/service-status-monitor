@@ -3670,5 +3670,14 @@
     "current": "minor",
     "description": "Minor Service Outage",
     "detectedAt": "2026. 6. 22. AM 9:40:30"
+  },
+  {
+    "id": "53db7efd-d827-4a42-b02a-6417cc89db68",
+    "service": "Claude",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 6. 22. AM 11:10:32"
   }
 ]

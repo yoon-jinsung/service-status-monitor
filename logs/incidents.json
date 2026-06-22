@@ -3661,5 +3661,14 @@
     "current": "major",
     "description": "Slack status: active",
     "detectedAt": "2026. 6. 22. AM 2:55:25"
+  },
+  {
+    "id": "a705d499-1445-4e28-8951-579a4241b67e",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Minor Service Outage",
+    "detectedAt": "2026. 6. 22. AM 9:40:30"
   }
 ]

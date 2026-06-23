@@ -3751,5 +3751,14 @@
     "current": "major",
     "description": "Partial System Outage",
     "detectedAt": "2026. 6. 23. PM 11:20:37"
+  },
+  {
+    "id": "8615b35e-ba86-4baa-8c12-3de99d0434ae",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "major",
+    "current": "minor",
+    "description": "Minor Service Outage",
+    "detectedAt": "2026. 6. 24. AM 12:30:42"
   }
 ]

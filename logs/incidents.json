@@ -3787,5 +3787,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 6. 24. AM 3:35:34"
+  },
+  {
+    "id": "ba0c0cdf-154a-4157-9688-58264fc76c65",
+    "service": "Notion",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partial System Degradation",
+    "detectedAt": "2026. 6. 24. PM 3:05:24"
   }
 ]

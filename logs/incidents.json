@@ -4003,5 +4003,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 7. 6. PM 6:15:25"
+  },
+  {
+    "id": "076cceb8-87f3-480f-8ad9-db9190aa8489",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "major",
+    "description": "Partial System Outage",
+    "detectedAt": "2026. 7. 7. AM 4:20:31"
   }
 ]

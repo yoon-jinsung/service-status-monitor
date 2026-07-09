@@ -4138,5 +4138,14 @@
     "current": "minor",
     "description": "Partially Degraded Service",
     "detectedAt": "2026. 7. 9. PM 1:35:20"
+  },
+  {
+    "id": "bcb2bf46-0fc7-4d40-93d9-098f9fc18bb3",
+    "service": "GitHub",
+    "type": "degraded",
+    "previous": "minor",
+    "current": "major",
+    "description": "Partial System Outage",
+    "detectedAt": "2026. 7. 9. PM 9:51:06"
   }
 ]

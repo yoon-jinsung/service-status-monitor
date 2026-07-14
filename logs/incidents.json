@@ -4300,5 +4300,14 @@
     "current": "minor",
     "description": "Minor Service Outage",
     "detectedAt": "2026. 7. 15. AM 6:35:25"
+  },
+  {
+    "id": "0a0f84fb-0a1a-4d88-8a44-8c55741daa89",
+    "service": "Claude",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 7. 15. AM 7:20:37"
   }
 ]

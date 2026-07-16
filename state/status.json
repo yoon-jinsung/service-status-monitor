@@ -1,11 +1,11 @@
 {
-  "lastChecked": "2026-07-16T22:00:50.875Z",
+  "lastChecked": "2026-07-16T22:05:21.527Z",
   "services": {
     "GitHub": {
-      "indicator": "minor",
-      "description": "Partially Degraded Service",
-      "lastChanged": "2026-07-16T21:10:31.009Z",
-      "lastNotified": "2026-07-16T21:10:31.009Z",
+      "indicator": "none",
+      "description": "All Systems Operational",
+      "lastChanged": "2026-07-16T22:05:21.527Z",
+      "lastNotified": "2026-07-16T22:05:21.527Z",
       "consecutiveFailures": 0
     },
     "Notion": {
@@ -37,10 +37,10 @@
       "consecutiveFailures": 0
     },
     "Claude": {
-      "indicator": "minor",
-      "description": "Minor Service Outage",
-      "lastChanged": "2026-07-16T18:40:35.456Z",
-      "lastNotified": "2026-07-16T18:40:35.456Z",
+      "indicator": "none",
+      "description": "All Systems Operational",
+      "lastChanged": "2026-07-16T22:05:21.527Z",
+      "lastNotified": "2026-07-16T22:05:21.527Z",
       "consecutiveFailures": 0
     }
   }

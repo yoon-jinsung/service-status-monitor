@@ -4399,5 +4399,23 @@
     "current": "minor",
     "description": "Partially Degraded Service",
     "detectedAt": "2026. 7. 17. AM 6:10:31"
+  },
+  {
+    "id": "8fec0180-46f3-42fd-8e49-53a1fc2737ca",
+    "service": "GitHub",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 7. 17. AM 7:05:21"
+  },
+  {
+    "id": "82a6961a-48dd-4119-a095-b3f099fca99e",
+    "service": "Claude",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 7. 17. AM 7:05:21"
   }
 ]

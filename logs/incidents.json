@@ -4444,5 +4444,14 @@
     "current": "minor",
     "description": "Partially Degraded Service",
     "detectedAt": "2026. 7. 17. PM 3:50:31"
+  },
+  {
+    "id": "75c07f45-6048-46a3-a8df-1af85ab95377",
+    "service": "Claude",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 7. 17. PM 4:05:22"
   }
 ]

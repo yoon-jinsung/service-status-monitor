@@ -4579,5 +4579,14 @@
     "current": "minor",
     "description": "Partially Degraded Service",
     "detectedAt": "2026. 7. 21. AM 1:05:30"
+  },
+  {
+    "id": "8cd541b9-b55a-4b0a-8558-f063bfb46633",
+    "service": "Claude",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 7. 21. AM 1:10:30"
   }
 ]

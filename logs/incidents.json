@@ -4705,5 +4705,14 @@
     "current": "minor",
     "description": "Minor Service Outage",
     "detectedAt": "2026. 7. 22. AM 12:55:22"
+  },
+  {
+    "id": "0d923fba-3b0a-400a-93b6-cbf8e24a411b",
+    "service": "Notion",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partial System Degradation",
+    "detectedAt": "2026. 7. 22. AM 1:25:23"
   }
 ]

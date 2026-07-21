@@ -4687,5 +4687,14 @@
     "current": "minor",
     "description": "Partially Degraded Service",
     "detectedAt": "2026. 7. 21. PM 11:45:27"
+  },
+  {
+    "id": "5c47e7e3-8b9f-4843-8e76-fa09906d32b2",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "minor",
+    "current": "major",
+    "description": "Partial System Outage",
+    "detectedAt": "2026. 7. 22. AM 12:35:24"
   }
 ]

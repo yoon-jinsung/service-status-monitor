@@ -4633,5 +4633,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 7. 21. PM 8:15:26"
+  },
+  {
+    "id": "49eb5f4c-6843-41f4-8ce2-585a49a3b18d",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "major",
+    "description": "Partial System Outage",
+    "detectedAt": "2026. 7. 21. PM 8:20:24"
   }
 ]

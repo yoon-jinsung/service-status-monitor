@@ -4840,5 +4840,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 7. 23. AM 7:05:23"
+  },
+  {
+    "id": "de49bc85-6df9-4dc0-abd3-b60935fd9cc6",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partially Degraded Service",
+    "detectedAt": "2026. 7. 23. AM 8:55:23"
   }
 ]

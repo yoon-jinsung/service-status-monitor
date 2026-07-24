@@ -4903,5 +4903,14 @@
     "current": "minor",
     "description": "Partial System Degradation",
     "detectedAt": "2026. 7. 24. PM 4:25:21"
+  },
+  {
+    "id": "a68954d7-a133-4258-9a9f-504981057c51",
+    "service": "Slack",
+    "type": "degraded",
+    "previous": "none",
+    "current": "major",
+    "description": "Slack status: active",
+    "detectedAt": "2026. 7. 24. PM 5:25:25"
   }
 ]

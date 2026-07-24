@@ -4984,5 +4984,14 @@
     "current": "minor",
     "description": "Partially Degraded Service",
     "detectedAt": "2026. 7. 25. AM 1:20:37"
+  },
+  {
+    "id": "c81d67c5-b713-4273-b814-6ffcceb45457",
+    "service": "GitHub",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 7. 25. AM 2:20:24"
   }
 ]

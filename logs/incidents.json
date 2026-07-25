@@ -5038,5 +5038,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 7. 25. PM 6:15:28"
+  },
+  {
+    "id": "08d1aff0-47f7-4f92-b3b2-d31b3109231c",
+    "service": "GitHub",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Minor Service Outage",
+    "detectedAt": "2026. 7. 25. PM 6:45:24"
   }
 ]

@@ -5065,5 +5065,14 @@
     "current": "major",
     "description": "Partial System Outage",
     "detectedAt": "2026. 7. 25. PM 9:35:30"
+  },
+  {
+    "id": "67c5a4a2-bc91-4c3f-8366-cacee1835048",
+    "service": "GitHub",
+    "type": "recovered",
+    "previous": "major",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 7. 25. PM 10:00:36"
   }
 ]

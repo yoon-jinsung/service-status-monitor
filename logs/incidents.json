@@ -5263,5 +5263,14 @@
     "current": "minor",
     "description": "Minor Service Outage",
     "detectedAt": "2026. 7. 30. AM 6:40:26"
+  },
+  {
+    "id": "ecfd0627-adf8-48d3-a2c0-0b282657c42a",
+    "service": "GitHub",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 7. 30. AM 7:00:47"
   }
 ]

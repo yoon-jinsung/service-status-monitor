@@ -5524,5 +5524,14 @@
     "current": "minor",
     "description": "Partial System Degradation",
     "detectedAt": "2026. 8. 4. PM 9:10:34"
+  },
+  {
+    "id": "779208b9-7287-4e94-93fe-7cbc8bfae13b",
+    "service": "Notion",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 8. 4. PM 9:20:36"
   }
 ]

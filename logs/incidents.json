@@ -5641,5 +5641,14 @@
     "current": "major",
     "description": "Partial System Outage",
     "detectedAt": "2026. 8. 7. AM 1:53:24"
+  },
+  {
+    "id": "df4e9e30-0e4f-4059-925b-e58c271c6a6b",
+    "service": "Slack",
+    "type": "degraded",
+    "previous": "none",
+    "current": "major",
+    "description": "Slack status: active",
+    "detectedAt": "2026. 8. 7. AM 7:25:27"
   }
 ]

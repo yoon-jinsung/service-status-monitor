@@ -5668,5 +5668,14 @@
     "current": "none",
     "description": "Slack is operating normally",
     "detectedAt": "2026. 8. 7. AM 9:40:51"
+  },
+  {
+    "id": "00c56a17-68fc-404c-bc99-ab124c72d8db",
+    "service": "GitHub",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partially Degraded Service",
+    "detectedAt": "2026. 8. 11. PM 11:55:30"
   }
 ]

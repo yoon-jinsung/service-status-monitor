@@ -5695,5 +5695,14 @@
     "current": "minor",
     "description": "Partially Degraded Service",
     "detectedAt": "2026. 8. 12. PM 10:55:22"
+  },
+  {
+    "id": "ee8d14bd-60bb-4b9a-ad7f-5c14f82343aa",
+    "service": "GitHub",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partially Degraded Service",
+    "detectedAt": "2026. 8. 13. AM 1:20:31"
   }
 ]

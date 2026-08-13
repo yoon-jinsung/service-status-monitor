@@ -5731,5 +5731,14 @@
     "current": "minor",
     "description": "Minor Service Outage",
     "detectedAt": "2026. 8. 13. PM 11:35:31"
+  },
+  {
+    "id": "cb7d7710-f11d-4274-ba29-bc1c0282e93c",
+    "service": "GitHub",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partially Degraded Service",
+    "detectedAt": "2026. 8. 13. PM 11:45:26"
   }
 ]

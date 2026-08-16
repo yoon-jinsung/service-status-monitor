@@ -5821,5 +5821,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 8. 15. AM 9:25:21"
+  },
+  {
+    "id": "60670473-5841-4d1b-aae7-fdfe5f20f4b7",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "major",
+    "description": "Partial System Outage",
+    "detectedAt": "2026. 8. 17. AM 7:00:47"
   }
 ]

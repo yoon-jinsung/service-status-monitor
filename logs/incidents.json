@@ -5866,5 +5866,14 @@
     "current": "major",
     "description": "Partial System Outage",
     "detectedAt": "2026. 8. 17. PM 11:35:24"
+  },
+  {
+    "id": "96d77b0c-d733-4786-b276-9446958753b6",
+    "service": "Claude",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 8. 17. PM 11:40:27"
   }
 ]

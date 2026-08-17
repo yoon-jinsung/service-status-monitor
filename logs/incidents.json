@@ -5848,5 +5848,14 @@
     "current": "minor",
     "description": "Partially Degraded Service",
     "detectedAt": "2026. 8. 17. PM 10:45:30"
+  },
+  {
+    "id": "0c425092-9642-42af-afd5-974432a23072",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partially Degraded Service",
+    "detectedAt": "2026. 8. 17. PM 11:00:40"
   }
 ]

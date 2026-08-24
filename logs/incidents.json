@@ -5965,5 +5965,14 @@
     "current": "minor",
     "description": "Minor Service Outage",
     "detectedAt": "2026. 8. 24. PM 2:10:29"
+  },
+  {
+    "id": "f0066bd1-c04f-4529-8160-55c019125e1e",
+    "service": "GitHub",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Minor Service Outage",
+    "detectedAt": "2026. 8. 24. PM 4:15:24"
   }
 ]

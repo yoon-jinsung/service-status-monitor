@@ -6046,5 +6046,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 8. 25. AM 5:30:35"
+  },
+  {
+    "id": "a52aaa0a-2ea4-4879-b41a-ce099abfc3f2",
+    "service": "GitHub",
+    "type": "degraded",
+    "previous": "none",
+    "current": "major",
+    "description": "Partial System Outage",
+    "detectedAt": "2026. 8. 27. AM 12:28:53"
   }
 ]

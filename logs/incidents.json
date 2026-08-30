@@ -6145,5 +6145,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 8. 30. PM 4:40:24"
+  },
+  {
+    "id": "54b7aacd-87fa-46dc-b027-a5a6e393fe34",
+    "service": "Notion",
+    "type": "degraded",
+    "previous": "none",
+    "current": "major",
+    "description": "Partial System Outage",
+    "detectedAt": "2026. 8. 31. AM 1:15:26"
   }
 ]

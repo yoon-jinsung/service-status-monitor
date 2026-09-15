@@ -6469,5 +6469,14 @@
     "current": "none",
     "description": "Slack is operating normally",
     "detectedAt": "2026. 9. 15. AM 7:35:22"
+  },
+  {
+    "id": "0baabebf-b88a-428a-b81a-e7eb388c25a9",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Minor Service Outage",
+    "detectedAt": "2026. 9. 15. PM 6:50:26"
   }
 ]

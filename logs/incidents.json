@@ -6721,5 +6721,14 @@
     "current": "minor",
     "description": "Partially Degraded Service",
     "detectedAt": "2026. 10. 2. 오전 12:25:21"
+  },
+  {
+    "id": "af3740b7-b08a-4ab5-aea4-0a744642eef5",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partially Degraded Service",
+    "detectedAt": "2026. 10. 2. 오전 1:25:20"
   }
 ]

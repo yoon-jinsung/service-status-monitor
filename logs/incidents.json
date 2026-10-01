@@ -6730,5 +6730,14 @@
     "current": "minor",
     "description": "Partially Degraded Service",
     "detectedAt": "2026. 10. 2. 오전 1:25:20"
+  },
+  {
+    "id": "b7d35d86-1fcb-46f9-9e7b-36e463b951f9",
+    "service": "GitHub",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 10. 2. 오전 3:00:47"
   }
 ]

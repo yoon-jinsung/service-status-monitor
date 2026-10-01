@@ -6685,5 +6685,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 10. 1. 오후 9:35:26"
+  },
+  {
+    "id": "d3947151-edb9-4280-934f-aa82170a6396",
+    "service": "Slack",
+    "type": "degraded",
+    "previous": "none",
+    "current": "major",
+    "description": "Slack status: active",
+    "detectedAt": "2026. 10. 1. 오후 9:40:28"
   }
 ]

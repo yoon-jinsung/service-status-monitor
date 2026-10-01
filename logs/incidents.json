@@ -6667,5 +6667,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 9. 30. AM 1:30:38"
+  },
+  {
+    "id": "f59911af-8aee-4ff4-b8c4-0dad51135cdb",
+    "service": "Notion",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partial System Degradation",
+    "detectedAt": "2026. 10. 1. 오후 9:20:27"
   }
 ]

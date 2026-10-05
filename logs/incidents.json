@@ -6757,5 +6757,14 @@
     "current": "none",
     "description": "Slack is operating normally",
     "detectedAt": "2026. 10. 2. 오전 4:00:44"
+  },
+  {
+    "id": "6451744f-c6d6-4f01-ac65-391fe2e25f3f",
+    "service": "Notion",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partial System Degradation",
+    "detectedAt": "2026. 10. 5. 오후 9:30:29"
   }
 ]

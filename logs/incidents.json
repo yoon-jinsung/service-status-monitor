@@ -6847,5 +6847,23 @@
     "current": "minor",
     "description": "Minor Service Outage",
     "detectedAt": "2026. 10. 6. 오후 9:25:20"
+  },
+  {
+    "id": "1ec2a3d3-0d18-47b2-82c0-c905f88502e7",
+    "service": "Notion",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 10. 6. 오후 9:45:25"
+  },
+  {
+    "id": "69b104c3-20ff-4660-a5e3-ae5ca481b831",
+    "service": "Claude",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 10. 6. 오후 9:45:25"
   }
 ]

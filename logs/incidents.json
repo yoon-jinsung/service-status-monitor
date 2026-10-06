@@ -6838,5 +6838,14 @@
     "current": "minor",
     "description": "Partial System Degradation",
     "detectedAt": "2026. 10. 6. 오후 6:50:24"
+  },
+  {
+    "id": "09083728-ac2a-4c9a-9b6f-5d687070c74d",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Minor Service Outage",
+    "detectedAt": "2026. 10. 6. 오후 9:25:20"
   }
 ]

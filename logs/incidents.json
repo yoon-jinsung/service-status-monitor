@@ -6910,5 +6910,14 @@
     "current": "minor",
     "description": "Minor Service Outage",
     "detectedAt": "2026. 10. 7. 오후 10:25:21"
+  },
+  {
+    "id": "45e2148b-2812-4788-bb40-a83052168496",
+    "service": "GitHub",
+    "type": "degraded",
+    "previous": "none",
+    "current": "major",
+    "description": "Partial System Outage",
+    "detectedAt": "2026. 10. 8. 오전 12:20:31"
   }
 ]

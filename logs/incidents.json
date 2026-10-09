@@ -6937,5 +6937,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 10. 8. 오전 12:50:29"
+  },
+  {
+    "id": "93ff9a4c-4517-4fdd-9e40-1faa04afb507",
+    "service": "Slack",
+    "type": "degraded",
+    "previous": "none",
+    "current": "major",
+    "description": "Slack status: active",
+    "detectedAt": "2026. 10. 10. 오전 12:40:24"
   }
 ]

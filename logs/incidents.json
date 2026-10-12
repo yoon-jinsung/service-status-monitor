@@ -6964,5 +6964,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 10. 12. 오후 11:40:27"
+  },
+  {
+    "id": "094fb38f-4ba4-432a-9e8b-46aa652301f7",
+    "service": "Slack",
+    "type": "recovered",
+    "previous": "major",
+    "current": "none",
+    "description": "Slack is operating normally",
+    "detectedAt": "2026. 10. 13. 오전 2:05:21"
   }
 ]

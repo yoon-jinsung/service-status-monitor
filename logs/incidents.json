@@ -6982,5 +6982,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 10. 14. 오전 3:00:39"
+  },
+  {
+    "id": "541fdad4-d045-4390-addb-66c5072f14d2",
+    "service": "Notion",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partial System Degradation",
+    "detectedAt": "2026. 10. 18. 오후 8:55:20"
   }
 ]

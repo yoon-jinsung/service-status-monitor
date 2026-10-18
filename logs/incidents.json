@@ -6991,5 +6991,14 @@
     "current": "minor",
     "description": "Partial System Degradation",
     "detectedAt": "2026. 10. 18. 오후 8:55:20"
+  },
+  {
+    "id": "2cabfb2e-ef07-4741-9bde-d8dc48dc20df",
+    "service": "Notion",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 10. 19. 오전 12:55:21"
   }
 ]

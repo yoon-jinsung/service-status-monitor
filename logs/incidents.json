@@ -7027,5 +7027,14 @@
     "current": "major",
     "description": "Partial System Outage",
     "detectedAt": "2026. 10. 21. 오전 3:50:25"
+  },
+  {
+    "id": "f5fd2788-4167-42df-828e-4afe259706b4",
+    "service": "Notion",
+    "type": "recovered",
+    "previous": "major",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 10. 21. 오후 11:45:28"
   }
 ]

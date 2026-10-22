@@ -7090,5 +7090,14 @@
     "current": "minor",
     "description": "Partially Degraded Service",
     "detectedAt": "2026. 10. 22. 오후 12:55:22"
+  },
+  {
+    "id": "32c18653-db34-4b3c-abe5-540e2ccfd4e7",
+    "service": "Notion",
+    "type": "recovered",
+    "previous": "major",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 10. 22. 오후 1:45:27"
   }
 ]

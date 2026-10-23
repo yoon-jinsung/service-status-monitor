@@ -7144,5 +7144,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 10. 23. 오전 2:45:26"
+  },
+  {
+    "id": "d91b594e-5e0a-4465-9399-f2c399069722",
+    "service": "Notion",
+    "type": "degraded",
+    "previous": "none",
+    "current": "critical",
+    "description": "Major System Outage",
+    "detectedAt": "2026. 10. 23. 오후 12:40:26"
   }
 ]

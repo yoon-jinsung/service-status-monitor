@@ -7180,5 +7180,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 10. 23. 오후 4:55:20"
+  },
+  {
+    "id": "ab4ff34d-9fd9-4ee7-aaa5-c10157a97c7a",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "major",
+    "description": "Partial System Outage",
+    "detectedAt": "2026. 10. 24. 오전 8:40:28"
   }
 ]

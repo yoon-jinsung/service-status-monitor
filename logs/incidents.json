@@ -7333,5 +7333,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 10. 28. 오전 12:55:24"
+  },
+  {
+    "id": "a79286d9-20cb-4f1e-aaaa-061fb619afa6",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partially Degraded Service",
+    "detectedAt": "2026. 10. 28. 오후 1:00:43"
   }
 ]

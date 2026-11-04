@@ -7522,5 +7522,14 @@
     "current": "minor",
     "description": "Minor Service Outage",
     "detectedAt": "2026. 11. 5. 오전 2:45:31"
+  },
+  {
+    "id": "5d863d72-a255-4f81-a840-f2bbc2696863",
+    "service": "GitHub",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 11. 5. 오전 3:10:29"
   }
 ]

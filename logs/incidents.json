@@ -7576,5 +7576,14 @@
     "current": "minor",
     "description": "Partially Degraded Service",
     "detectedAt": "2026. 11. 8. 오후 5:30:40"
+  },
+  {
+    "id": "0e6e8b3e-c9aa-4f56-82ec-5e801b6478b5",
+    "service": "Claude",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 11. 8. 오후 5:55:23"
   }
 ]

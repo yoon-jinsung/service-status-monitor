@@ -7630,5 +7630,14 @@
     "current": "major",
     "description": "Partial System Outage",
     "detectedAt": "2026. 11. 10. 오전 3:30:40"
+  },
+  {
+    "id": "0ea56755-e277-4805-8192-c4734d1865f9",
+    "service": "GitHub",
+    "type": "recovered",
+    "previous": "major",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 11. 10. 오전 3:45:33"
   }
 ]

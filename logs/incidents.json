@@ -7639,5 +7639,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 11. 10. 오전 3:45:33"
+  },
+  {
+    "id": "005c1e2b-f6c3-487c-8467-620819bacf18",
+    "service": "GitHub",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Minor Service Outage",
+    "detectedAt": "2026. 11. 10. 오전 8:20:31"
   }
 ]

@@ -7657,5 +7657,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 11. 10. 오전 8:50:30"
+  },
+  {
+    "id": "8f2b622c-516a-4105-89b7-c6d655d47300",
+    "service": "GitHub",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partially Degraded Service",
+    "detectedAt": "2026. 11. 11. 오전 1:15:32"
   }
 ]

@@ -7720,5 +7720,14 @@
     "current": "major",
     "description": "Slack status: active",
     "detectedAt": "2026. 11. 12. 오전 12:25:25"
+  },
+  {
+    "id": "4ffae988-5eec-48f3-a5b9-fd646a944270",
+    "service": "Slack",
+    "type": "recovered",
+    "previous": "major",
+    "current": "none",
+    "description": "Slack is operating normally",
+    "detectedAt": "2026. 11. 12. 오전 4:00:44"
   }
 ]

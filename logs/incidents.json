@@ -7729,5 +7729,14 @@
     "current": "none",
     "description": "Slack is operating normally",
     "detectedAt": "2026. 11. 12. 오전 4:00:44"
+  },
+  {
+    "id": "7c5a9fb6-71ab-4f30-aca0-c8aaa082c648",
+    "service": "GitHub",
+    "type": "degraded",
+    "previous": "none",
+    "current": "major",
+    "description": "Partial System Outage",
+    "detectedAt": "2026. 11. 12. 오전 5:57:32"
   }
 ]

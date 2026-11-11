@@ -7711,5 +7711,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 11. 11. 오전 7:15:30"
+  },
+  {
+    "id": "6a1ff6a3-4b1f-4dc2-917c-3844227ab0b3",
+    "service": "Slack",
+    "type": "degraded",
+    "previous": "none",
+    "current": "major",
+    "description": "Slack status: active",
+    "detectedAt": "2026. 11. 12. 오전 12:25:25"
   }
 ]

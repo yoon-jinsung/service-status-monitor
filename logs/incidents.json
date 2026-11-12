@@ -7747,5 +7747,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 11. 12. 오전 6:10:30"
+  },
+  {
+    "id": "7102c22b-f1dc-4cb7-a644-8f22ffc74d91",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Minor Service Outage",
+    "detectedAt": "2026. 11. 13. 오전 2:55:25"
   }
 ]

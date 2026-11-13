@@ -1,9 +1,9 @@
 {
-  "lastChecked": "2026-11-13T16:05:24.426Z",
+  "lastChecked": "2026-11-13T16:10:36.533Z",
   "services": {
     "GitHub": {
       "indicator": "minor",
-      "description": "Minor Service Outage",
+      "description": "Partially Degraded Service",
       "lastChanged": "2026-11-13T15:50:29.688Z",
       "lastNotified": "2026-11-13T15:50:29.688Z",
       "consecutiveFailures": 0

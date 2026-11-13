@@ -7792,5 +7792,14 @@
     "current": "major",
     "description": "Partial System Outage",
     "detectedAt": "2026. 11. 13. 오후 7:00:40"
+  },
+  {
+    "id": "7bc90f3f-2a89-4191-b765-2e3424141b14",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "major",
+    "current": "minor",
+    "description": "Minor Service Outage",
+    "detectedAt": "2026. 11. 13. 오후 11:40:29"
   }
 ]

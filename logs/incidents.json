@@ -7783,5 +7783,14 @@
     "current": "minor",
     "description": "Partial System Degradation",
     "detectedAt": "2026. 11. 13. 오전 5:10:31"
+  },
+  {
+    "id": "301e7b08-212a-48e8-af3a-238dc57efcbf",
+    "service": "Claude",
+    "type": "degraded",
+    "previous": "minor",
+    "current": "major",
+    "description": "Partial System Outage",
+    "detectedAt": "2026. 11. 13. 오후 7:00:40"
   }
 ]

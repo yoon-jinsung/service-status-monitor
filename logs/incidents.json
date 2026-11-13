@@ -7846,5 +7846,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 11. 14. 오전 6:30:35"
+  },
+  {
+    "id": "371dd078-cc63-4895-a229-f0e5d36395c7",
+    "service": "Claude",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 11. 14. 오전 6:50:30"
   }
 ]

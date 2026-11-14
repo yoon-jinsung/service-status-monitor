@@ -7864,5 +7864,14 @@
     "current": "minor",
     "description": "Minor Service Outage",
     "detectedAt": "2026. 11. 14. 오전 11:55:22"
+  },
+  {
+    "id": "69e06c4a-5941-4828-87d7-e1b49eb3a664",
+    "service": "Claude",
+    "type": "recovered",
+    "previous": "minor",
+    "current": "none",
+    "description": "All Systems Operational",
+    "detectedAt": "2026. 11. 14. 오후 1:25:25"
   }
 ]

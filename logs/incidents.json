@@ -7882,5 +7882,14 @@
     "current": "minor",
     "description": "Minor Service Outage",
     "detectedAt": "2026. 11. 14. 오후 4:15:31"
+  },
+  {
+    "id": "16941817-7f26-4192-a253-f83d96950867",
+    "service": "GitHub",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partially Degraded Service",
+    "detectedAt": "2026. 11. 16. 오후 9:00:46"
   }
 ]

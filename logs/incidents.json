@@ -7900,5 +7900,14 @@
     "current": "none",
     "description": "All Systems Operational",
     "detectedAt": "2026. 11. 17. 오전 1:10:30"
+  },
+  {
+    "id": "a3ba0b5f-3fe0-453a-879a-bf653bdf03a4",
+    "service": "Notion",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partial System Degradation",
+    "detectedAt": "2026. 11. 18. 오전 4:00:51"
   }
 ]

@@ -8008,5 +8008,14 @@
     "current": "minor",
     "description": "Partially Degraded Service",
     "detectedAt": "2026. 11. 24. 오전 9:15:30"
+  },
+  {
+    "id": "bac1312f-8083-4269-8427-5ba400a4567c",
+    "service": "GitHub",
+    "type": "degraded",
+    "previous": "none",
+    "current": "minor",
+    "description": "Partially Degraded Service",
+    "detectedAt": "2026. 11. 24. 오후 10:45:28"
   }
 ]

@@ -8062,5 +8062,14 @@
     "current": "major",
     "description": "Partial System Outage",
     "detectedAt": "2026. 11. 26. 오전 1:10:36"
+  },
+  {
+    "id": "129dd917-82bd-43fc-9f2b-2e652eefc9cf",
+    "service": "GitHub",
+    "type": "degraded",
+    "previous": "major",
+    "current": "minor",
+    "description": "Minor Service Outage",
+    "detectedAt": "2026. 11. 26. 오전 1:35:25"
   }
 ]

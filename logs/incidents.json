@@ -8053,5 +8053,14 @@
     "current": "minor",
     "description": "Partially Degraded Service",
     "detectedAt": "2026. 11. 26. 오전 1:00:56"
+  },
+  {
+    "id": "252524b5-7199-484b-b6f3-f9a7d5fe8cc0",
+    "service": "GitHub",
+    "type": "degraded",
+    "previous": "minor",
+    "current": "major",
+    "description": "Partial System Outage",
+    "detectedAt": "2026. 11. 26. 오전 1:10:36"
   }
 ]
